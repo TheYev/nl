@@ -1,0 +1,103 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* width: 1280; */
+    /* height: 907; */
+    top: 78px;
+    left: 36px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(71, 0, 236, 0.1) 0%, rgba(236, 246, 254, 0.2) 100%);
+}
+
+.head_block {
+    display: flex;
+    flex-direction: column;
+    width: 916;
+    height: 111;
+    top: 69px;
+    left: 182px;
+    gap: 20px;    
+}
+
+.head {
+    font-family: var(--font-syne);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #381664;
+}
+
+.subHead {
+    font-family: var(--font-mulish);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #00000099;
+}
+
+.info_block {
+   display: flex;
+   flex-direction: row; 
+}
+
+.info {
+    border-radius: 12px;
+    justify-content: space-evenly;
+    width: 240px;
+    height: 535px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 850px;
+    height: 535px;
+}
+
+.extension {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.extention_bttn {
+    width: 206;
+    height: 50;
+    padding-top: 12px;
+    padding-right: 40px;
+    padding-bottom: 12px;
+    padding-left: 40px;
+    border-radius: 57px;
+    background: linear-gradient(90deg, #512DA8 0%, #270086 100%);
+    border: 0px;
+    
+    font-family: var(--font-outfit);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.46px;
+    cursor: pointer;
+}
+
+.bttn_description {
+    font-family: var(--font-mulish);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 266%;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #00000099;
+    padding-bottom: 50px;
+}

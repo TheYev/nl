@@ -1,0 +1,52 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    width: 1214px;/*95%*/
+    height: 466px;
+    justify-content: space-between;
+    padding-left: 60px;
+    border-radius: 56px;
+    background: linear-gradient(165.7deg, #0A0C43 10%, #101258 41.77%);
+    color: #fff;
+}
+
+.main_info {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    justify-content: center;
+}
+
+.header {
+    font-family: var(--font-syne);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0%;    
+}
+
+.description {
+    font-family: var(--font-mulish);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0%;    
+}
+
+.main_img {
+    max-height: 466px;
+    border: 0px;
+    border-radius: 0 56px 56px 0;
+}
+
+.card_collection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}

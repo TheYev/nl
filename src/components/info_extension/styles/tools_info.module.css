@@ -1,0 +1,31 @@
+.toolsInfo {
+    display: flex;
+    flex-direction: column;
+    width: 240;
+    height: 90;
+    gap: 4px;
+    padding-top: 8px;
+    padding-right: 12px;
+    padding-bottom: 8px;
+    padding-left: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.header {
+    font-family: var(--font-outfit);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0%;
+}
+
+.desciption {
+    font-family: var(--font-mulish);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    letter-spacing: 0%;
+    color: #00000099;
+
+}

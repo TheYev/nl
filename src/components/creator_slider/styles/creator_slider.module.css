@@ -1,0 +1,33 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    gap: 60px;
+}
+
+.head {
+    font-family: var(--font-syne);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #381664;
+    align-items: center;
+}
+
+.slyderBody {
+  display: flex;
+  justify-content: center;
+}
+
+.slider {
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.slide {
+  width: auto !important;
+}

@@ -1,0 +1,45 @@
+.card {
+    display: inline-flex;
+    flex-direction: column;
+    border-radius: 32px;
+    border-bottom-width: 4px;
+    padding: 16px;
+    color: #000;
+    max-width: 318px;
+    background: rgb(255 255 255);
+    box-shadow: 34.85px 29.63px 48.34px 0px #3366FF0D;
+    backdrop-filter: blur(40px);
+    gap: 8px;
+    margin: 12px;
+}
+
+.head {
+    font-family: var(--font-poppins);
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 130%;
+    letter-spacing: -2%;
+    text-align: center;
+    color: #4C29B5;
+}
+
+.subHead {
+    font-family: var(--font-poppins);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 160%;
+    letter-spacing: 0.15px;
+    text-align: center;
+    color: #000000DE;
+}
+
+.description {
+    font-family: var(--font-mulish);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #000000DE;
+
+}

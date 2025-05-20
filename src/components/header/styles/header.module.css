@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #440A8F;
+    height: 84;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+}
+
+.header_nav {
+    display: flex;
+    flex-direction: row;
+    width: 373;
+    height: 42;
+    gap: 50px;
+}
+
+.bttn_link {
+    display: flex;
+    justify-content: center;
+    border: 2px solid transparent;
+    padding: 5px;
+    border-radius: 32px;
+    transition: all 0.2s ease;
+}
+
+.bttn_link:hover {
+    border-color: #673AB780;
+    background-color: #673AB70A;
+}
+
+.header_bttn {
+    background: transparent;
+    font-family: var(--outfit-syne);
+    color: #512DA8;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 26px;
+    letter-spacing: 0.46px;
+    border: none;
+    cursor: pointer;
+}
