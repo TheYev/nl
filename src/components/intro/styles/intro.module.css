@@ -9,6 +9,9 @@
     align-items: center;
     justify-content: center;
     background: radial-gradient(50% 50% at 50% 50%, rgba(71, 0, 236, 0.1) 0%, rgba(236, 246, 254, 0.2) 100%);
+
+    height: 680;
+
 }
 
 .info_block {
