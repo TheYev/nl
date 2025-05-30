@@ -1,9 +1,22 @@
 export enum Urls {
-    ABOUT = '/',
+    // Header
+    PLUGIN = '/',
+    LEGAL = '/',
     PRICING = '/',
-    HOW_IT_WORKS = '/',
+    SING_UP = '/',
+
+    // Intri block
     GET_EARLY_ACCESS = '/',
+
+    // Extention block
     INSTALL_EXTENTION = '/',
+
+    // Footer
+    DISCORD = '/',
+    INSTAGRAM = '/',
+    REDDIT = '/',
+    X = '/',
+    TELEGRAM = '/'
 }
 
 // Used on components/info_extention.tsx

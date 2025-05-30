@@ -3,6 +3,14 @@ import styles from "./styles/footer.module.css"
 import { Urls } from "@/utils/Urls"
 
 export const Footer = () => {
+    const logos: { [key: string]: string } = {
+        "/footer/discord.svg": Urls.DISCORD,
+        "/footer/instagram.svg": Urls.INSTAGRAM,
+        "/footer/reddit.svg": Urls.REDDIT,
+        "/footer/x.svg": Urls.X,
+        "/footer/telegram.svg": Urls.TELEGRAM
+    }
+
     return (
         <footer className={styles.footer}>
             <div className={styles.footer_header}>
@@ -13,19 +21,55 @@ export const Footer = () => {
                     </a>
                 </div>
 
+                <p className={styles.description}>No credit card required. Cancel anytime. Start growing your income with less effort.</p>
             </div>
 
-            <p className={styles.description}>No credit card required. Cancel anytime. Start growing your income with less effort.</p>
-            
-            <Image
-                src="/footer.svg"
-                width={196}
-                height={196}
-                alt="IMG"
-            />
-            <p className={styles.resume}>© 2025 Neurolover</p>
+            <div className={styles.info}>
+                <div className={styles.social_links}>
+                    {Object.entries(logos).map(([iconPath, href], index) => (
+                        <a
+                            key={index}
+                            href={href}
+                        >
+                            <Image
+                                src={iconPath}
+                                width={20}
+                                height={20}
+                                alt="Social icon"
+                            />
+                        </a>
+                    ))}
+                </div>
 
-            
+                <div className={styles.info_desciption}>
+                    <Image
+                        src="/footer/footer_logo.svg"
+                        width={200}
+                        height={44}
+                        alt="IMG"
+                    />
+                    <Image
+                        src="/footer/footer.svg"
+                        width={196}
+                        height={196}
+                        alt="Woman"
+                    />
+                    <div className={styles.resume}>
+                        <p className={styles.company_name}>© 2025 Neurolover</p>
+                        <p className={styles.short_app_info}>Currently in beta — features may evolve based on feedback.</p>
+                    </div>
+                </div>
+
+
+                <div className={styles.link}>
+                    <a className={styles.links}>Privacy Policy</a>
+                    <a className={styles.links}>Terms Of Service</a>
+                    <a className={styles.links}>Contact Us</a>
+                </div>
+
+            </div>
+
+
         </footer>
     )
 }

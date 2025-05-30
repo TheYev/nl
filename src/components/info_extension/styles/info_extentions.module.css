@@ -3,8 +3,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* width: 1280; */
-    /* height: 907; */
+    /* width: 1280px auto; */
+    /* height: 907px;  */
     top: 78px;
     left: 36px;
     background: radial-gradient(50% 50% at 50% 50%, rgba(71, 0, 236, 0.1) 0%, rgba(236, 246, 254, 0.2) 100%);
@@ -42,14 +42,15 @@
 
 .info_block {
    display: flex;
-   flex-direction: row; 
+   flex-direction: row;
+   /* width: 1280px; */
 }
 
 .info {
     border-radius: 12px;
     justify-content: space-evenly;
     width: 240px;
-    height: 535px;
+    height: 644px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,8 +60,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 850px;
-    height: 535px;
+    width: 1024px;
+    height: 644px;
 }
 
 .extension {

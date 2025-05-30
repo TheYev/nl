@@ -1,20 +1,8 @@
 .footer {
-    /* display: flex;
-    gap: 40px;
-    flex-direction: column;
-    width: 100%;
-    max-width: 1280px;
-    background: #00174B;
-    background: linear-gradient(180deg, #00174B 0%, #23013E 100%);
-    color: #FFFFFF;
-    align-items:  center;
-    justify-content: center; */
-
     display: flex;
     flex-direction: column;
     gap: 40px;
     width: 100%;
-    max-width: 1280px;
     margin: 0 auto;
     background: linear-gradient(180deg, #00174B 0%, #23013E 100%);
     color: #FFFFFF;
@@ -28,6 +16,7 @@
     padding-top: 60px;
     padding-right: 100px;
     padding-left: 100px;
+    max-width: 860px;
 }
 
 .access {
@@ -66,23 +55,80 @@
     cursor: pointer;
 }
 
-.description {
-    font-family: var(--font-mulish);
+.description {  
+    color: #FFFFFFCC;
+    font-family: var(--font-outfit);
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 150%;
     letter-spacing: 0%;
-    text-align: center;
-
 }
 
 .resume {
-    font-family: var(--font-mulish);
+    /* font-family: var(--font-mulish);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px; */
+    letter-spacing: 0%;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.company_name {
+    font-family: var(--font-mulish);;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0%;
-    margin-bottom: 40px;
+}
+
+.short_app_info {
+    font-family: var(--font-poppins);
+    font-weight: 300;
+    font-style: italic;
+    font-size: 12px;
+    line-height: 32px;
+    letter-spacing: 0%;
+
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 5% 0 5%;
+}
+
+.info_desciption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+.link {
+    display: flex;
+    gap: 8px;
+}
+.links {
+    padding-top: 6px;
+    padding-right: 8px;
+    padding-bottom: 6px;
+    padding-left: 8px;
+    border-radius: 32px;
+
+    font-family: var(--font-syne);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 32px;
+    letter-spacing: 0%;
+    color: #FFFFFFCC;
+}
+
+.social_links {
+    display: flex;
+    gap: 36px;
 }
 
 @media (max-width: 780px) {

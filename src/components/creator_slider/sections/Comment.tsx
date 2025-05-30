@@ -1,6 +1,6 @@
 import styles from '../styles/comment.module.css'
 
-interface commentProps {
+type commentProps = {
     creator: string,
     creatorPosition: string,
     comment: string,

@@ -12,14 +12,17 @@ export const Header = () => {
                 alt="Logo"
             />
             <div className={styles.header_nav}>
-                <a href={Urls.ABOUT} className={styles.bttn_link}>
-                    <button className={styles.header_bttn}>About</button>
+                <a href={Urls.PLUGIN} className={styles.bttn_link}>
+                    <button className={styles.header_bttn}>Plugin</button>
+                </a>
+                <a href={Urls.LEGAL} className={styles.bttn_link}>
+                    <button className={styles.header_bttn}>Legal</button>
                 </a>
                 <a href={Urls.PRICING} className={styles.bttn_link}>
                     <button className={styles.header_bttn}>Pricing</button>
                 </a>
-                <a href={Urls.HOW_IT_WORKS} className={styles.bttn_link}>
-                    <button className={styles.header_bttn}>How it works</button>
+                <a href={Urls.SING_UP} className={styles.bttn_link}>
+                    <button className={styles.header_bttn}>Sing Up</button>
                 </a>
             </div>
         </header>

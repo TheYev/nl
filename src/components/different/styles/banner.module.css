@@ -1,11 +1,15 @@
 .banner {
-    width: 533px;
-    height: 308px;
+    width: 624px;
+    height: 254px;
     padding-top: 32px;
     padding-bottom: 32px;
     border-radius: 20px;
     border-width: 1.5px;
     background: #090337;
+    
+    /* background-size: cover;  */
+    background-position: right;
+    background-repeat: no-repeat;
 }
 
 .main {
@@ -14,7 +18,7 @@
     gap: 12px;
     padding-right: 36px;
     padding-left: 36px;
-    width: 350px;
+    width: 404px;
 }
 
 .head {
@@ -39,10 +43,39 @@
 }
 
 .description {
+    color: #FFFFFFCC;
+
     font-family: var(--font-outfit);
     font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 150%;
     letter-spacing: 0%;
-    color: #FFFFFF;
+}
+
+@media (max-width: 1300px) {
+    .banner {
+        width: 455px;
+        justify-content: center;
+    }
+
+    .main {
+        width: 277px;
+    }
+}
+
+@media (max-width: 1132px) {
+    .banner {
+        width: 100%;
+    }
+    .main {
+        width: 70%;
+    }
+}
+
+@media (max-width: 743px) {
+    .banner {
+        height: 476px;
+        width: 252px;
+        background-position: top;
+    }
 }

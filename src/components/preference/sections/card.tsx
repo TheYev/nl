@@ -1,6 +1,6 @@
 import styles from "../styles/card.module.css"
 
-interface CardProps {
+type CardProps = {
     header: string,
     subHeader: string
     description: string

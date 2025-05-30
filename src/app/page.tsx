@@ -1,6 +1,6 @@
 import { Intro } from "@/components/intro/intro";
 import { ShortDescription } from "@/components/short_description/short_description";
-import { Diferent } from "@/components/different/different";
+import { Different } from "@/components/different/different";
 import { InfoExtension } from "@/components/info_extension/info_extension";
 import { Preference } from "@/components/preference/preference";
 import { CreatorSlider } from "@/components/creator_slider/creator_slider";
@@ -10,7 +10,7 @@ export default function Home() {
     <div>
       <Intro />
       <ShortDescription />
-      <Diferent />
+      <Different />
       <InfoExtension />
       <Preference />
       <CreatorSlider />

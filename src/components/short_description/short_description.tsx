@@ -2,8 +2,6 @@ import { Card } from "@/components/short_description/sections/card"
 import styles from "./styles/short_description.module.css"
 import Image from "next/image"
 
-
-
 export const ShortDescription = () => {
     return (
         <div className={styles.body}>

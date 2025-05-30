@@ -4,12 +4,13 @@ import { Urls } from "@/utils/Urls"
 
 export const Intro = () => {
     return (
-        <div className={styles.block_1}>
+        <div className={styles.intro}>
             <Image
                 src="block_1.svg"
                 alt="Woman"
-                width={451}
-                height={451}
+                width={580}
+                height={580}
+                className={styles.image}
             />
 
             <div className={styles.info_block}>
