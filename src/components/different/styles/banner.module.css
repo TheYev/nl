@@ -1,81 +1,112 @@
 .banner {
+    display: flex;
+    flex-direction: row;
     width: 624px;
     height: 254px;
-    padding-top: 32px;
-    padding-bottom: 32px;
     border-radius: 20px;
-    border-width: 1.5px;
-    background: #090337;
-    
-    /* background-size: cover;  */
-    background-position: right;
-    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
 }
 
 .main {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    padding-right: 36px;
-    padding-left: 36px;
-    width: 404px;
+    padding: 32px 36px;
+    width: 380px;
+    box-sizing: border-box;
+    z-index: 2;
+    position: relative;
+}
+
+.image {
+    width: 254px;
+    height: 254px;
+    object-fit: cover;
+    border-radius: 20px;
+    z-index: 1;
 }
 
 .head {
-    width: 337;
+    width: 337px;
     font-family: var(--font-outfit);
     font-weight: 600;
     font-size: 28px;
     line-height: 32px;
-    letter-spacing: 0%;
     color: #FFFFFF;
 }
 
-.subHead {
-    font-family: var(--font-poppins);
-    font-weight: 400;
-    font-style: italic;
-    font-size: 20px;
-    line-height: 117%;
-    letter-spacing: 0px;
-    color: #FFFFFFB2;
-
-}
-
 .description {
-    color: #FFFFFFCC;
-
     font-family: var(--font-outfit);
     font-weight: 400;
     font-size: 20px;
     line-height: 150%;
-    letter-spacing: 0%;
+    color: #FFFFFFCC;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1300px) and (min-width: 744px) {
     .banner {
-        width: 455px;
-        justify-content: center;
+        width: 100%;
+        height: 254px;
+        position: relative;
+    }
+
+    .image {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 254px;
+        height: 254px;
     }
 
     .main {
-        width: 277px;
+        width: 75%;
+        height: 100%;
+        padding: 32px;
+        background: none;
     }
 }
 
 @media (max-width: 1132px) {
     .banner {
-        width: 100%;
+        height: 194px;
     }
+
+    .image {
+        height: 194px;
+        width: 194px;
+    }
+
     .main {
-        width: 70%;
+        padding: 24px;
     }
 }
 
 @media (max-width: 743px) {
-    .banner {
-        height: 476px;
-        width: 252px;
-        background-position: top;
+   .banner {
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 256px;
+        height: 576px;
+    }
+
+    .image {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .main {
+        width: 100%;
+        height: calc(100% - 220px);
+        padding: 24px;
+        text-align: center;
+        justify-content: flex-start;
+        overflow: hidden;
+    }
+
+    .head { 
+        width: auto;
     }
 }

@@ -9,20 +9,12 @@ export const Preference = () => {
         <div className={styles.main}>
             <div className={styles.body}>
                 <div className={styles.texts}>
-                    <h1 className={styles.head}>Boost your income — <br />not your screen time</h1>
-                    <p className={styles.subHeda}>
-                        With NeuroLover, creators
-                        <span className={styles.highlightedWords}>save up to 80%</span>
-                        of their messaging time and see up to
-                        <span className={styles.highlightedWords}>65% more in tips and sales.</span>
-                    </p>
-
-
+       
                     <div className={styles.cards}>
-                        <Card header="-80%" subHeader="Less DM Time" description="Let AI handle the repetitive{</br>} replies so you don’t have to." />
-                        <Card header="3x" subHeader="More Conversations Started" description="AI keeps fans engaged — no dead ends, no ghosting." />
-                        <Card header="+35%" subHeader="More Tips & Sales" description="Faster replies and playful nudges = more fans spending." />
-                        <Card header="+60%" subHeader="Faster Response Time" description="Instant replies = happier, tipping fans." />
+                        <Card headPercent="-80%" headText="DM Time" description="Let AI handle the repetitive replies so you don’t have to." />
+                        <Card headPercent="+35%" headText="Tips & Sales" description="Faster replies and playful nudges = more fans spending." />
+                        <Card headPercent="x3" headText="Conversations" description="AI keeps fans engaged — no dead ends, no ghosting." />
+                        <Card headPercent="-60%" headText="Response Time" description="Instant replies = happier, tipping fans." />
                     </div>
                 </div>
 

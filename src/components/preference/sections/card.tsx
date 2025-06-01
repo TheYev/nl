@@ -1,16 +1,18 @@
 import styles from "../styles/card.module.css"
 
 type CardProps = {
-    header: string,
-    subHeader: string
+    headPercent: string,
+    headText: string
     description: string
 }
 
 export const Card = (props: CardProps) => {
     return (
         <div className={styles.card}>
-            <h2 className={styles.head}>{props.header}</h2>
-            <p className={styles.subHead}>{props.subHeader}</p>
+            <div className={styles.head}>
+                <h2 className={styles.headText}>{props.headText}</h2>
+                <h2 className={styles.headPercent}>{props.headPercent}</h2>
+            </div>
             <p className={styles.description}>{props.description}</p>
         </div>
     )

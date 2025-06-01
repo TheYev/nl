@@ -17,6 +17,14 @@ export const Intro = () => {
                 <h1 className={styles.head}>Turn More Chats into Cash — AI Messaging for OnlyFans& Fansly</h1>
                 <p className={styles.info}>Trusted by top 1% creators to boost revenue and save time. Our AI assistant keeps fans engaged, increases tips, and drives sales — all through seamless Chrome extension integration.</p>
                 <div className={styles.bttn_info}>
+
+                    <Image
+                        src="block_1.svg"
+                        alt="Woman"
+                        width={280}
+                        height={280}
+                        className={styles.imageMobile}
+                    />
                     <a href={Urls.GET_EARLY_ACCESS}>
                         <button className={styles.bttn}>Get Early Access</button>
                     </a>

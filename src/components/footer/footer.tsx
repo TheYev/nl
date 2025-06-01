@@ -13,19 +13,40 @@ export const Footer = () => {
 
     return (
         <footer className={styles.footer}>
-            <div className={styles.footer_header}>
-                <div className={styles.access}>
-                    <p className={styles.access_text}>Beta access is limited — <br />grab your spot today</p>
-                    <a href={Urls.GET_EARLY_ACCESS}>
-                        <button className={styles.access_bttn}>Get Early Access</button>
-                    </a>
-                </div>
+            <Image
+                src="/footer/footer.svg"
+                width={196}
+                height={196}
+                alt="Woman"
+            />
 
-                <p className={styles.description}>No credit card required. Cancel anytime. Start growing your income with less effort.</p>
-            </div>
 
             <div className={styles.info}>
+                <div className={styles.footer_header}>
+                    <div className={styles.access}>
+                        <p className={styles.access_text}>Beta access is limited — <br />grab your spot today</p>
+                        <a href={Urls.GET_EARLY_ACCESS}>
+                            <button className={styles.access_bttn}>Get Early Access</button>
+                        </a>
+                    </div>
+
+                    <p className={styles.description}>No credit card required. Cancel anytime. Start growing your income with less effort.</p>
+                </div>
+
                 <div className={styles.social_links}>
+                    <div className={styles.info_desciption}>
+                        <div className={styles.resume}>
+                            <p className={styles.company_name}>© 2025 Neurolover</p>
+                            {/* <p className={styles.short_app_info}>Currently in beta — features may evolve based on feedback.</p> */}
+                        </div>
+                    </div>
+
+                    <div className={styles.link}>
+                        <a className={styles.links}>Privacy Policy</a>
+                        <a className={styles.links}>Terms Of Service</a>
+                        <a className={styles.links}>Contact Us</a>
+                    </div>
+
                     {Object.entries(logos).map(([iconPath, href], index) => (
                         <a
                             key={index}
@@ -40,33 +61,6 @@ export const Footer = () => {
                         </a>
                     ))}
                 </div>
-
-                <div className={styles.info_desciption}>
-                    <Image
-                        src="/footer/footer_logo.svg"
-                        width={200}
-                        height={44}
-                        alt="IMG"
-                    />
-                    <Image
-                        src="/footer/footer.svg"
-                        width={196}
-                        height={196}
-                        alt="Woman"
-                    />
-                    <div className={styles.resume}>
-                        <p className={styles.company_name}>© 2025 Neurolover</p>
-                        <p className={styles.short_app_info}>Currently in beta — features may evolve based on feedback.</p>
-                    </div>
-                </div>
-
-
-                <div className={styles.link}>
-                    <a className={styles.links}>Privacy Policy</a>
-                    <a className={styles.links}>Terms Of Service</a>
-                    <a className={styles.links}>Contact Us</a>
-                </div>
-
             </div>
 
 
