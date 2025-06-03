@@ -7,6 +7,9 @@ import { Urls } from "@/utils/Urls"
 import { useState } from "react"
 import { InfoExtentionImg } from "@/utils/Urls"
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/css';
+
 const toolList = [
     {
         head: "Tone Selector UI",
@@ -47,17 +50,59 @@ export const InfoExtension = () => {
                 <p className={styles.subHead}>NeuroLover works directly inside your OnlyFans and Fansly page...</p>
             </div>
 
+            {/* ---------------------1132px---------------------------------- */}
+            <div className={styles.info_block_mobile}>
+                <div className={styles.info_mobile}>
+                    <Swiper
+                        centeredSlides={true}
+                        slidesPerView="auto"
+                        spaceBetween={2}
+                        className={`${styles.slider} ${styles.sliderShadow}`}
+                    >
+                        {toolList.map((tool, index) => {
+                            return (
+                                <SwiperSlide key={index} style={{ minWidth: "240px" }}>
+                                    <ToolsInfo
+                                        key={tool.head}
+                                        head={tool.head}
+                                        desciption={tool.desciption}
+                                        isActive={tool.head === activeTool}
+                                        onClick={() => setActiveTool(tool.head)}
+                                    />
+                                </SwiperSlide>
+                            )
+                        })}
+                    </Swiper>
+
+                </div>
+
+                <div className={styles.img_mobile}>
+                    <Image
+                        src={currentImg}
+                        alt="Tool image"
+                        width={1024}
+                        height={644}
+                        className={styles.toolImg_mobile}
+                        priority
+                    />
+                </div>
+            </div>
+
+            {/* ---------------------default desctop---------------------------------- */}
             <div className={styles.info_block}>
                 <div className={styles.info}>
-                    {toolList.map((tool) => (
-                        <ToolsInfo
-                            key={tool.head}
-                            head={tool.head}
-                            desciption={tool.desciption}
-                            isActive={tool.head === activeTool}
-                            onClick={() => setActiveTool(tool.head)}
-                        />
-                    ))}
+                    {toolList.map((tool) => {
+                        return (
+                            <ToolsInfo
+                                key={tool.head}
+                                head={tool.head}
+                                desciption={tool.desciption}
+                                isActive={tool.head === activeTool}
+                                onClick={() => setActiveTool(tool.head)}
+                            />
+                        )
+                    })}
+
                 </div>
 
                 <div className={styles.img}>
@@ -66,6 +111,7 @@ export const InfoExtension = () => {
                         alt="Tool image"
                         width={1024}
                         height={644}
+                        className={styles.toolImg}
                     />
                 </div>
             </div>

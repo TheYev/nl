@@ -21,8 +21,6 @@ export const Comment = (props: commentProps) => {
 
                 transform: `${props.isActive ? 'scale(1)' : 'scale(0.8)'}`,
                 opacity: '0.8',
-                // height: props.isActive ? '266px' : '200px',
-                // width: props.isActive ? '630px' : '800px'
             }}
         >
             <div className={styles.head}>

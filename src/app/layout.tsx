@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "../styles/globals.css";
 import { Header } from "@/components/header/header";
 import { Footer } from "@/components/footer/footer";
-import { OutfitFont, MulishFont, SyneFont, PoppinsFont } from "@/utils/fonts";
+import { OutfitFont, MulishFont, SyneFont, PoppinsFont, RobotoFont } from "@/utils/fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,7 +22,8 @@ export default function RootLayout({
           ${OutfitFont.variable} 
           ${MulishFont.variable} 
           ${SyneFont.variable}
-          
+          ${PoppinsFont.variable}
+          ${RobotoFont.variable}
         `}
       >
 

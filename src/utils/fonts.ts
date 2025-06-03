@@ -1,4 +1,4 @@
-import { Outfit, Mulish, Syne, Poppins } from "next/font/google";
+import { Outfit, Mulish, Syne, Poppins, Roboto } from "next/font/google";
 
 export const OutfitFont = Outfit({
     subsets: ['latin'],
@@ -9,14 +9,20 @@ export const MulishFont = Mulish({
     subsets: ['latin'],
     variable: "--font-mulish"
 })
-
 export const SyneFont = Syne({
     subsets: ['latin'],
-    variable: "--font-syne"
-}) 
+    variable: "--font-syne",
+    weight: ['400']
+})
 
 export const PoppinsFont = Poppins({
     subsets: ['latin'],
     variable: "--font-poppins",
+    weight: ['400']
+})
+
+export const RobotoFont = Roboto({
+    subsets: ['latin'],
+    variable: "--font-roboto",
     weight: ['400']
 })
