@@ -7,9 +7,13 @@ export const Preference = () => {
 
     return (
         <div className={styles.main}>
+            <div className={styles.header}>
+                <h1 className={styles.header_text}>Boost your income —  not your screen time</h1>
+                <h2 className={styles.header_description}>With NeuroLover, creators <span className={styles.header_description_highlighted}>save up to 80%</span> of their messaging time and <span className={styles.header_description_highlighted}>see up to 65% more</span> in tips and sales.</h2>
+            </div>
             <div className={styles.body}>
                 <div className={styles.texts}>
-       
+
                     <div className={styles.cards}>
                         <Card headPercent="-80%" headText="DM Time" description="Let AI handle the repetitive replies so you don’t have to." />
                         <Card headPercent="+35%" headText="Tips & Sales" description="Faster replies and playful nudges = more fans spending." />
@@ -22,7 +26,7 @@ export const Preference = () => {
                     {tips.map((amount, index) => (
                         <p style={{ opacity: `${opacityVal[index]}` }} key={index}>💬 ${amount} tips received</p>
                     ))}
-                    
+
                     <div>
                         <p className={styles.highlighted}>
                             <span className={styles.highlightedWords}>“I doubled my tips in just two weeks.” –</span>

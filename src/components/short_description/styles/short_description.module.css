@@ -124,15 +124,27 @@
         background: linear-gradient(180deg, #00174B 0%, #23013E 100%);
         height: auto;
     }
+    .main_info {
+        padding: 0px;
+    }
+    .header {
+        padding: 32px 32px 0px 32px;
+    }
+    .description {
+        padding: 0px 32px 0px 32px;
+    }
+    .card_collection {
+        padding: 0px 32px 32px 32px;
+    }
 
     .main_img {
         display: none;
     }
 
     .main_img_mobile {
-        display: flex;
-        z-index: 1;
+        display: block;
         width: 100%;
-        height: 100%;
+        height: auto;
+        object-fit: cover;
     }
 }

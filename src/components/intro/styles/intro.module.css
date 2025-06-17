@@ -19,9 +19,8 @@
 .info_block {
     display: flex;
     flex-direction: column;
-    /* width: 581; */
-    /* height: 331; */
     gap: 20px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(71, 0, 236, 0.1) 0%, rgba(236, 246, 254, 0.2) 100%);
 }
 
 .head {
@@ -30,6 +29,7 @@
     font-size: 36px;
     line-height: 100%;
     letter-spacing: 0%;
+    color: var(--Text-Accent, #381664);
 }
 
 .info {
@@ -100,5 +100,8 @@
         display: flex;
         width: 100%;
         margin-bottom: 24px;
+    }
+    .info_block {
+        background: radial-gradient(50% 50% at 50% 50%, rgba(71, 0, 236, 0.1) 0%, rgba(236, 246, 254, 0.2) 100%);
     }
 }

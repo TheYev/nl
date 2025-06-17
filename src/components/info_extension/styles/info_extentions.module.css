@@ -170,4 +170,8 @@
         height: auto;
         max-width: 1024px;
     }
+
+    .mobile_bg {
+        background: radial-gradient(50% 50% at 50% 50%, rgba(71, 0, 236, 0.1) 0%, rgba(236, 246, 254, 0.2) 100%);
+    }
 }

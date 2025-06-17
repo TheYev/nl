@@ -6,6 +6,39 @@
     padding: 0 26px 0 26px;
 }
 
+.header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+    padding-bottom: 28px;
+}
+
+.header_text {
+    font-family: var(--font-syne);
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: var(--Text-Accent, #381664);
+}
+
+.header_description {
+    font-family: var(--font-outfit);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: var(--Text-Sec, #00000099);
+    max-width: 860px;
+}
+.header_description_highlighted {
+    font-weight: 700;
+    color: var(--Text-Accent, #381664);
+}
+
 .body {
     display: flex;
     flex-direction: row;
@@ -17,6 +50,9 @@
     background: 
         url("/preferences_bg.svg") no-repeat top right,
         linear-gradient(175.85deg, #010E2E 2.13%, #041536 95.03%);
+    /* background-size: contain; */
+    /* background-position: top right; */
+    /* background-repeat: no-repeat; */
     gap: 20px;
     background-size: auto;
     position: relative;
@@ -98,7 +134,6 @@
 @media (max-width: 1133px) {
     .body {
         flex-direction: column;
-        /* height: auto; */
         height: 974px;
         justify-content: flex-end;
     }
@@ -128,6 +163,12 @@
 @media (max-width: 775px) {
   .body {
     height: auto;
+        background: 
+        url("/preferences_bg.svg") no-repeat top right,
+        linear-gradient(175.85deg, #010E2E 2.13%, #041536 95.03%);
+    background-size: contain; 
+    background-position: top right; 
+    background-repeat: no-repeat;
   }
    .cards {
         display: grid;

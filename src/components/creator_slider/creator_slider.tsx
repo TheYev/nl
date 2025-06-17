@@ -23,7 +23,7 @@ export const CreatorSlider = () => {
                 <Swiper
                     centeredSlides={true}
                     slidesPerView="auto"
-                    spaceBetween={16}
+                    spaceBetween={1}
                     onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
                     className={styles.slider}
                 >

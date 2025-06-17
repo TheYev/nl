@@ -30,7 +30,7 @@ export const Comment = (props: commentProps) => {
             <p
                 className={styles.commentText}
                 style={{
-                    WebkitLineClamp: 3,
+                    WebkitLineClamp: 2,
                 }}
             >{props.comment}</p>
         </div>

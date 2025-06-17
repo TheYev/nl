@@ -54,14 +54,14 @@ export const InfoExtension = () => {
             <div className={styles.info_block_mobile}>
                 <div className={styles.info_mobile}>
                     <Swiper
-                        centeredSlides={true}
+                        centeredSlides={false}
                         slidesPerView="auto"
                         spaceBetween={2}
                         className={`${styles.slider} ${styles.sliderShadow}`}
                     >
                         {toolList.map((tool, index) => {
                             return (
-                                <SwiperSlide key={index} style={{ minWidth: "240px" }}>
+                                <SwiperSlide key={index} style={{ minWidth: "240px" }} className={styles.mobile_bg}>
                                     <ToolsInfo
                                         key={tool.head}
                                         head={tool.head}
