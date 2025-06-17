@@ -138,4 +138,8 @@
     max-height: 500px;
     margin: auto;
   }
+
+  .info {
+    max-width: 340px;
+  }
 }
