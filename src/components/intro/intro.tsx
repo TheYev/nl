@@ -13,6 +13,8 @@ export const Intro = () => {
                 className={styles.image}
             />
 
+            <div className={styles.background}></div>
+
             <div className={styles.info_block}>
                 <h1 className={styles.head}>Turn More Chats into Cash — AI Messaging for OnlyFans& Fansly</h1>
                 <p className={styles.info}>Trusted by top 1% creators to boost revenue and save time. Our AI assistant keeps fans engaged, increases tips, and drives sales — all through seamless Chrome extension integration.</p>

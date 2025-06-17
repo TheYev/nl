@@ -28,6 +28,7 @@ export const Different = () => {
                 {banners.map((banner, index) => {
                     return (
                         <Banner
+                            key={index}
                             head={banner.head}
                             description={banner.description}
                             imgPath={banner.imgPath}

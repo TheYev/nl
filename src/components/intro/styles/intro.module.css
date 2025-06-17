@@ -1,10 +1,10 @@
 .intro {
- display: flex;
+    position: relative;
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 
-    /* width: 100%; */
     max-width: 1280px;
     margin: 0 auto;
     padding: 32px 96px;
@@ -12,15 +12,33 @@
 
     min-height: 644px; 
     background: radial-gradient(50% 50% at 50% 50%, rgba(71, 0, 236, 0.1) 0%, rgba(236, 246, 254, 0.2) 100%);
-    backdrop-filter: blur(12px)
+    backdrop-filter: blur(12px);
+    overflow: hidden;
+}
+.image {
+    z-index: 1;
+}
 
+.background {
+    position: absolute;
+    top: 165px;
+    right: 220px;
+    width: 1290px;
+    height: 340px;
+
+    background: radial-gradient(70% 70% at top right, rgba(71, 0, 236, 0.1), rgba(236, 246, 254, 0.2));
+    
+    z-index: 0;
+    pointer-events: none;
+    filter: blur(60px);
 }
 
 .info_block {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(71, 0, 236, 0.1) 0%, rgba(236, 246, 254, 0.2) 100%);
+    z-index: 1;
+    position: relative;
 }
 
 .head {
@@ -93,15 +111,29 @@
         text-align: center;
         gap: 24px;
     }
+
+    .background {
+        width: 251.55087280273438;
+        height: 309.47369384765625;
+        left: 170px;
+        top: 50px;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(71, 0, 236, 0.1) 0%, rgba(236, 246, 254, 0.2) 100%);
+        backdrop-filter: blur(12px)
+}
+
     .image {
         display: none;
     }
+
     .imageMobile {
         display: flex;
         width: 100%;
         margin-bottom: 24px;
     }
+
     .info_block {
-        background: radial-gradient(50% 50% at 50% 50%, rgba(71, 0, 236, 0.1) 0%, rgba(236, 246, 254, 0.2) 100%);
+        /* background: radial-gradient(50% 50% at 50% 50%, rgba(71, 0, 236, 0.1) 0%, rgba(236, 246, 254, 0.2) 100%); */
     }
 }
