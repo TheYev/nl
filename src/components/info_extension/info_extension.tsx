@@ -45,6 +45,10 @@ export const InfoExtension = () => {
 
     return (
         <div className={styles.main}>
+
+            
+            <div className={styles.background}></div>
+
             <div className={styles.head_block}>
                 <h1 className={styles.head}>Let AI do the heavy lifting — you stay in control</h1>
                 <p className={styles.subHead}>NeuroLover works directly inside your OnlyFans and Fansly page...</p>

@@ -1,0 +1,17 @@
+.layout {
+  max-width: 1280px;
+  margin: auto;
+  padding-inline: 96px;
+}
+
+@media (max-width: 1132px) {
+  .layout {
+    padding-inline: 40px;
+  }
+}
+
+@media (max-width: 742px) {
+  .layout {
+    padding-inline: 16px;
+  }
+}

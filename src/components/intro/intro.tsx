@@ -5,28 +5,21 @@ import { Urls } from "@/utils/Urls"
 export const Intro = () => {
     return (
         <div className={styles.intro}>
+            <div className={styles.background}></div>
+            
             <Image
                 src="block_1.svg"
                 alt="Woman"
-                width={580}
-                height={580}
                 className={styles.image}
+                width={510}
+                height={510}
             />
 
-            <div className={styles.background}></div>
-
             <div className={styles.info_block}>
-                <h1 className={styles.head}>Turn More Chats into Cash — AI Messaging for OnlyFans& Fansly</h1>
-                <p className={styles.info}>Trusted by top 1% creators to boost revenue and save time. Our AI assistant keeps fans engaged, increases tips, and drives sales — all through seamless Chrome extension integration.</p>
+                <h1 className={styles.head}>Turn More Chats into Cash — AI Messaging for OnlyFans & Fansly</h1>
+                <p className={styles.info}>Trusted by top 1% creators to boost revenue and save time. Our AI assistant keeps
+                    fans engaged, increases tips, and drives sales — all through seamless Chrome extension integration.</p>
                 <div className={styles.bttn_info}>
-
-                    <Image
-                        src="block_1.svg"
-                        alt="Woman"
-                        width={280}
-                        height={280}
-                        className={styles.imageMobile}
-                    />
                     <a href={Urls.GET_EARLY_ACCESS}>
                         <button className={styles.bttn}>Get Early Access</button>
                     </a>
