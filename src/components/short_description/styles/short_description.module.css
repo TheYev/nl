@@ -1,150 +1,145 @@
 .body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 32px 0 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main {
-    display: flex;
-    flex-direction: row;
-    max-width: 1280px;
-    height: 464px;
-    justify-content: space-between;
-    padding-left: 60px;
-    border-radius: 56px;
-    background: linear-gradient(165.7deg, #0A0C43 10%, #101258 41.77%);
-    color: #fff;
-    overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 60px;
+  border-radius: 56px;
+  background: linear-gradient(165.7deg, #0A0C43 10%, #101258 41.77%);
+  color: #fff;
+  overflow: hidden;
 }
 
 .main_info {
-    display: flex;
-    flex-direction: column;
-    gap: 21px;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  justify-content: center;
 }
 
 .header {
-    font-family: var(--font-syne);
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 100%;
-    letter-spacing: 0%;    
+  font-family: var(--font-syne);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
 }
 
 .description {
-    font-family: var(--font-mulish);
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 0%;    
+  font-family: var(--font-mulish);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
 }
 
 .main_img {
-    max-height: 466px;
-    border: 0px;
-    border-radius: 0 56px 56px 0;
+  max-height: 466px;
+  border-radius: 0 56px 56px 0;
 }
 
 .card_collection {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 .main_img_mobile {
-    display: none;
+  display: none;
 }
 
 @media (max-width: 1250px) {
-    .main {
-        position: relative;
-        padding-right: 0;
-    }
+  .main {
+    position: relative;
+    padding-right: 0;
+  }
 
-    .main_info {
-        position: relative;
-        width: 55%;
-        z-index: 2;
-        padding: 32px;
-        border-radius: 56px 0 0 56px;
-    }
+  .main_info {
+    position: relative;
+    width: 55%;
+    z-index: 2;
+    padding: 32px;
+    border-radius: 56px 0 0 56px;
+  }
 
-    .main_img {
-        position: absolute;
-        top: 0;
-        right: 0;
-        height: 100%;
-        width: auto;
-        z-index: 1;
-    }
+  .main_img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: auto;
+    z-index: 1;
+  }
 }
 
 @media (max-width: 1133px) {
-    .main {
-        position: relative;
-        flex-direction: column;
-        height: 464px;
-        padding: 0;
-    }
+  .main {
+    position: relative;
+    flex-direction: column;
+  }
 
-    .main_img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-    }
+  .main_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
 
-    .main_info {
-        position: relative;
-        z-index: 2;
-        width: 100%;
-        padding: 32px;
-        border-radius: 56px;
-        display: flex;
-        flex-direction: column;
-        gap: 21px;
-        justify-content: flex-end;
-        height: 100%;
-        box-sizing: border-box;
-    }
+  .main_info {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 32px;
+    border-radius: 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    justify-content: flex-end;
+    height: 100%;
+    box-sizing: border-box;
+  }
 }
 
 @media (max-width: 743px) {
-    .main_info {
-        justify-content: center;
-    }
+  .main_info {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 743px) {
-    .main {
-        background: linear-gradient(180deg, #00174B 0%, #23013E 100%);
-        height: auto;
-    }
-    .main_info {
-        padding: 0px;
-    }
-    .header {
-        padding: 32px 32px 0px 32px;
-    }
-    .description {
-        padding: 0px 32px 0px 32px;
-    }
-    .card_collection {
-        padding: 0px 32px 32px 32px;
-    }
+  .main {
+    background: linear-gradient(180deg, #00174B 0%, #23013E 100%);
+    height: auto;
+  }
 
-    .main_img {
-        display: none;
-    }
+  .main_info {
+    padding: 0;
+  }
 
-    .main_img_mobile {
-        display: block;
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
+  .header {
+    padding: 32px 32px 0 32px;
+  }
+
+  .description {
+    padding: 0 32px 0 32px;
+  }
+
+  .card_collection {
+    padding: 0 32px 32px 32px;
+  }
+
+  .main_img {
+    display: none;
+  }
+
+  .main_img_mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 }

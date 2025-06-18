@@ -1,64 +1,63 @@
 .card {
-    display: flex;
-    flex-direction: column;
-    width: 368px;
-    height: 130px;
-    border-radius: 32px;
-    gap: 23px;
-    padding: 24px;
-    background: #FFFFFF1A;
-    box-shadow: 34.85px 29.63px 48.34px 0px #3366FF0D;
-    backdrop-filter: blur(40px)
+  display: flex;
+  flex-direction: column;
+  width: 368px;
+  height: 130px;
+  border-radius: 32px;
+  gap: 23px;
+  padding: 24px;
+  background: #FFFFFF1A;
+  box-shadow: 34.85px 29.63px 48.34px 0px #3366FF0D;
+  backdrop-filter: blur(40px)
 }
 
 .head {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .headPercent {
-    font-family: var(--font-poppins);
-    color: #fff;
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 32px;
-    letter-spacing: 0%;
+  font-family: var(--font-poppins);
+  color: #fff;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 32px;
 }
 
 .headText {
-    font-family: var(--font-poppins);
-    color: #fff;
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 32px;
-    letter-spacing: 0%;
+  font-family: var(--font-poppins);
+  color: #fff;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 32px;
 }
 
 .description {
-    font-family: var(--font-mulish);
-    color: #fff;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 130%;
-    text-align: justify;
+  font-family: var(--font-mulish);
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  text-align: justify;
 }
 
 @media (max-width: 1133px) {
-    .card {
-        width: 100%;
-        min-width: 280px;
-    }
+  .card {
+    width: 100%;
+    min-width: 280px;
+  }
 }
 
 @media (max-width: 775px) {
-    .headText {        
-        font-size: 20px;
-    }
-    .headPercent {
-        font-size: 20px;
-    }
-    .description {
-        font-size: 16PX;
-    }
+  .headText {
+    font-size: 20px;
+  }
+
+  .headPercent {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 16PX;
+  }
 }

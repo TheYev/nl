@@ -1,112 +1,104 @@
 .banner {
-    display: flex;
-    flex-direction: row;
-    width: 624px;
-    height: 254px;
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
 }
 
 .main {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding: 32px 36px;
-    width: 380px;
-    box-sizing: border-box;
-    z-index: 2;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 32px 36px;
+  width: 380px;
+  box-sizing: border-box;
+  z-index: 2;
+  position: relative;
 }
 
 .image {
-    width: 254px;
-    height: 254px;
-    object-fit: cover;
-    border-radius: 20px;
-    z-index: 1;
+  width: 254px;
+  height: 254px;
+  object-fit: cover;
+  border-radius: 20px;
+  z-index: 1;
 }
 
 .head {
-    width: 337px;
-    font-family: var(--font-outfit);
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 32px;
-    color: #FFFFFF;
+  width: 337px;
+  font-family: var(--font-outfit);
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 32px;
+  color: #FFFFFF;
 }
 
 .description {
-    font-family: var(--font-outfit);
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 150%;
-    color: #FFFFFFCC;
+  font-family: var(--font-outfit);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #FFFFFFCC;
 }
 
 @media (max-width: 1300px) and (min-width: 744px) {
-    .banner {
-        width: 100%;
-        height: 254px;
-        position: relative;
-    }
+  .banner {
+    width: 100%;
+    position: relative;
+  }
 
-    .image {
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 254px;
-        height: 254px;
-    }
+  .image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 254px;
+    height: 254px;
+  }
 
-    .main {
-        width: 75%;
-        height: 100%;
-        padding: 32px;
-        background: none;
-    }
+  .main {
+    width: 75%;
+    height: 100%;
+    padding: 32px;
+    background: none;
+  }
 }
 
 @media (max-width: 1132px) {
-    .banner {
-        height: 194px;
-    }
+  .image {
+    height: 194px;
+    width: 194px;
+  }
 
-    .image {
-        height: 194px;
-        width: 194px;
-    }
-
-    .main {
-        padding: 24px;
-    }
+  .main {
+    padding: 24px;
+  }
 }
 
 @media (max-width: 743px) {
-   .banner {
-        flex-direction: column-reverse;
-        align-items: center;
-        width: 256px;
-        height: 576px;
-    }
+  .banner {
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 256px;
+    height: 576px;
+  }
 
-    .image {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        border-radius: 20px 20px 0 0;
-    }
+  .image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+  }
 
-    .main {
-        width: 100%;
-        height: calc(100% - 220px);
-        padding: 24px;
-        text-align: center;
-        justify-content: flex-start;
-        overflow: hidden;
-    }
+  .main {
+    width: 100%;
+    height: calc(100% - 220px);
+    padding: 24px;
+    text-align: center;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
 
-    .head { 
-        width: auto;
-    }
+  .head {
+    width: auto;
+  }
 }

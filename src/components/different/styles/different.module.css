@@ -1,77 +1,70 @@
 .body {
-    display: flex;
-    flex-direction: column;
-    gap: 64px;
-    padding-top: 80px;
-    padding-right: 60px;
-    padding-bottom: 0px; /*60px*/
-    padding-left: 60px;
-    border-radius: 56px;
-    align-items: center;
-
-    /* min-height: 963px; */
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  border-radius: 56px;
+  align-items: center;
 }
 
 .header_texts {
-    display: flex;
-    flex-direction: column;
-    max-width: 680px;
-    text-align: center;
-    height: 111;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 680px;
+  text-align: center;
+  gap: 20px;
 }
 
 .head {
-    font-family: var(--font-syne);
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    color: #381664;
+  font-family: var(--font-syne);
+  font-weight: 700;
+  font-size: 36px;
+  color: #381664;
 }
 
 .subHead {
-    font-family: var(--font-mulish);
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 0%;
-    text-align: center;
-    color: #00000099;
+  font-family: var(--font-mulish);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #00000099;
 }
 
 .banners {
-    display: grid;
-    gap: 16px;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
 }
 
 .slider {
-    display: none;
+  display: none;
 }
 
 @media (max-width: 1132px) {
-    .banners {
-        grid-template-columns: repeat(1, 1fr);
-        width: 100%;
-    }
+  .banners {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
 }
 
 @media (max-width: 743px) {
-    .banners {
-        display: none;
-    }
-    .body {
-        gap: 130px;
-    }
-    .slider {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-top: 20px;
-    }
-    .slide {
-        width: auto !important;
-    }
+  .banners {
+    display: none;
+  }
+
+  .body {
+    gap: 130px;
+  }
+
+  .slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  .slide {
+    width: auto !important;
+  }
 }
