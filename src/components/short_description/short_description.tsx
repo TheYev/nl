@@ -15,15 +15,13 @@ export const ShortDescription = () => {
             save time, reduce burnout, and never leave money on the table.
           </p>
 
-          <div>
-            <Image
-              className={styles.main_img_mobile}
-              src="block_2.svg"
-              alt="Woman 2"
-              width={343}
-              height={237}
-            />
-          </div>
+          <Image
+            className={styles.main_img_mobile}
+            src="block_2.svg"
+            alt="Woman 2"
+            width={699}
+            height={464}
+          />
 
           <div className={styles.card_collection}>
             <Card title="😩 Broken energy" />
@@ -39,7 +37,7 @@ export const ShortDescription = () => {
             src="block_2.svg"
             alt="Woman 2"
             width={699}
-            height={466}
+            height={464}
           />
         </div>
       </div>
