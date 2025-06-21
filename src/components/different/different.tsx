@@ -11,7 +11,7 @@ export const Different = () => {
     {
       head: "Context-Aware Messaging",
       description:
-        "NeuroLover keeps replies in context, so every message feels smooth and personal.",
+        "NeuroLover remembers the chat so replies always make sense. It picks up where you left off, keeping convos smooth and personal.",
       imgPath: "/banners/banner_1.svg",
       bgColor: "var(--Bento-Blue, #090337)",
     },
@@ -64,7 +64,11 @@ export const Different = () => {
       </div>
 
       <div className={styles.slider}>
-        <Swiper centeredSlides={true} slidesPerView="auto" spaceBetween={10}>
+        <Swiper
+          className={styles.swiperSlider}
+          slidesPerView="auto"
+          spaceBetween={10}
+        >
           {banners.map((banner, index) => {
             return (
               <SwiperSlide key={index} className={styles.slide}>

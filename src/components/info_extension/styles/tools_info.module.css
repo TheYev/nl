@@ -1,72 +1,57 @@
 .toolsInfo {
-    display: flex;
-    flex-direction: column;
-    width: 240px;
-    height: auto;
-    gap: 4px;
-    padding-top: 8px;
-    padding-right: 12px;
-    padding-bottom: 8px;
-    padding-left: 12px;
-    border-radius: 12px;
-    cursor: pointer;
-    background: #FFFFFF26;
-    box-shadow: 0px 4px 48px 0px #0000001A;
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  height: auto;
+  gap: 4px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #FFFFFF26;
+  box-shadow: 0 4px 48px 0 #0000001A;
 }
 
 .header {
-    font-family: var(--font-outfit);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 26px;
-    letter-spacing: 0%;
+  font-family: var(--font-outfit);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
 }
 
 .desciption {
-    font-family: var(--font-mulish);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 160%;
-    letter-spacing: 0%;
-    color: #00000099;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  color: #00000099;
 }
 
 .active {
-    width: 240px;
-    height: auto;
-    gap: 4px;
-    border-radius: 12px;
-    padding-top: 8px;
-    padding-right: 12px;
-    padding-bottom: 8px;
-    padding-left: 12px;
-    background: #FFFFFF;
+  width: 240px;
+  height: auto;
+  gap: 4px;
+  border-radius: 12px;
+  padding: 8px 12px;
+  background: #FFFFFF;
 }
 
 @media (max-width: 1133px) {
-    .toolsInfo {
-        width: auto;
-        max-width: 292px;
-        height: 90px;
+  .toolsInfo {
+    width: 100%;
+    max-width: 292px;
+    block-size: 100%;
 
-        gap: 4px;
-        padding-top: 8px;
-        padding-right: 12px;
-        padding-bottom: 8px;
-        padding-left: 12px;
-        border-radius: 12px;
-        background: #ffffff26;
-        box-shadow: 0 4px 48px #0000001a;
-    } 
-    .active {
-        width: auto;
-        height: 90px;    
-        gap: 4px;
-        border-radius: 12px;
-        padding-top: 8px;
-        padding-right: 12px;
-        padding-bottom: 8px;
-        padding-left: 12px;
-        background: #FFFFFF;
-    }
+    gap: 4px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    background: #ffffff26;
+    box-shadow: 0 4px 48px #0000001a;
+  }
+
+  .active {
+    gap: 4px;
+    border-radius: 12px;
+    padding: 8px 12px;
+    background: #FFFFFF;
+  }
 }
