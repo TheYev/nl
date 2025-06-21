@@ -8,6 +8,7 @@ import {
   SyneFont,
   PoppinsFont,
   RobotoFont,
+  MontserratFont,
 } from "@/utils/fonts";
 
 export const metadata: Metadata = {
@@ -30,6 +31,7 @@ export default function RootLayout({
           ${SyneFont.variable}
           ${PoppinsFont.variable}
           ${RobotoFont.variable}
+          ${MontserratFont.variable}
         `}
       >
         <Header />

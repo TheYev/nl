@@ -1,6 +1,6 @@
 .banner {
   display: flex;
-  border-radius: 20px;
+  border-radius: 32px;
   overflow: hidden;
   position: relative;
 }
@@ -14,6 +14,7 @@
   box-sizing: border-box;
   z-index: 2;
   position: relative;
+  justify-content: center;
 }
 
 .image {
@@ -25,7 +26,7 @@
 }
 
 .head {
-  width: 337px;
+  max-width: 277px;
   font-family: var(--font-outfit);
   font-weight: 600;
   font-size: 28px;
@@ -45,6 +46,7 @@
   .banner {
     width: 100%;
     position: relative;
+    height: 254px;
   }
 
   .image {

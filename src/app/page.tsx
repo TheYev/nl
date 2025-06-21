@@ -7,6 +7,7 @@ import { CreatorSlider } from "@/components/creator_slider/creator_slider";
 
 import "@/styles/globals.css"
 import styles from "./app.module.css";
+import { Payment } from "@/components/payment/payment";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <InfoExtension />
       <Preference />
       <CreatorSlider />
+      <Payment />
     </div>
   );
 }
