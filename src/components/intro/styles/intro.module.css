@@ -21,6 +21,7 @@
   height: 100%;
   max-width: 100%;
   max-height: 100%;
+  z-index: 3;
 }
 
 .info_block {
@@ -94,7 +95,7 @@
 
 .head::before {
   content: "";
-  z-index: -1;
+  z-index: 2;
   filter: blur(90px);
   background: radial-gradient(50% 50%, #4700ec38 0%, #ecf6fe33 100%);
   width: 200%;
