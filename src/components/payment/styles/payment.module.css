@@ -120,6 +120,9 @@
     appearance: none;
 }
 
+.some {
+    color: #000;
+}
 
 @media (max-width: 743px) {
     .payment_card {

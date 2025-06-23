@@ -15,7 +15,6 @@ export const Payment = () => {
                 // const data = await response.json()
                 // setPrice(data.price)
 
-                // Тимчасова емуляція
                 setPrice(accounts * months * 39)
             } catch (error) {
                 console.error('Error fetching price:', error)
@@ -39,7 +38,7 @@ export const Payment = () => {
     return (
         <div className={styles.main}>
             <div className={styles.payment_card}>
-                
+
                 <div className={styles.info}>
                     <h1 className={styles.head}>Affordable Price</h1>
                     <div className={styles.description}>
@@ -62,13 +61,16 @@ export const Payment = () => {
 
                     <div className={styles.counter}>
                         <label className={styles.counters_info_text}>Billing Period</label>
-                        <input
-                            type="number"
+                        <select
                             value={months}
-                            min={1}
                             onChange={handleMonthsChange}
                             className={styles.input}
-                        />
+                        >
+                            <option className={styles.some} value={1}>1 Months</option>
+                            <option className={styles.some} value={3}>3 Months</option>
+                            <option className={styles.some} value={6}>6 Months</option>
+                            <option className={styles.some} value={12}>12 Months</option>
+                        </select>
                     </div>
                 </div>
 
