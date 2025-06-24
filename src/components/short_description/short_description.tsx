@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const ShortDescription = () => {
   return (
-    <div className={styles.body}>
+    <section className={styles.body} aria-label="Common challenges creators face">
       <div className={styles.main}>
         <div className={styles.main_info}>
           <h1 className={styles.header}>
@@ -18,9 +18,10 @@ export const ShortDescription = () => {
           <Image
             className={styles.main_img_mobile}
             src="block_2.svg"
-            alt="Woman 2"
+            alt="Woman using NeuroLover app"
             width={699}
             height={464}
+            priority
           />
 
           <div className={styles.card_collection}>
@@ -35,12 +36,13 @@ export const ShortDescription = () => {
           <Image
             className={styles.main_img}
             src="block_2.svg"
-            alt="Woman 2"
+            alt="Woman using NeuroLover app"
             width={699}
             height={464}
+            priority
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };

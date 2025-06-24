@@ -17,7 +17,7 @@ export const CreatorSlider = () => {
     ]
 
     return (
-        <div className={styles.main}>
+        <section className={styles.main} aria-label="Testimonials from top creators">
             <h1 className={styles.head}>Loved by top 1% creators</h1>
             <div className={styles.slyderBody}>
                 <Swiper
@@ -26,21 +26,20 @@ export const CreatorSlider = () => {
                     spaceBetween={1}
                     onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
                     className={styles.slider}
+                    role="list"
                 >
-                    {slides.map((slide, index) => {
-                        return (
-                            <SwiperSlide key={index} className={styles.slide}>
-                                <Comment
-                                    creator={slide.creator}
-                                    creatorPosition={slide.creatorPosition}
-                                    comment={slide.comment}
-                                    isActive={index === activeIndex}
-                                />
-                            </SwiperSlide>
-                        );
-                    })}
+                    {slides.map((slide, index) => (
+                        <SwiperSlide key={index} className={styles.slide} role="listitem" aria-current={index === activeIndex ? "true" : "false"}>
+                            <Comment
+                                creator={slide.creator}
+                                creatorPosition={slide.creatorPosition}
+                                comment={slide.comment}
+                                isActive={index === activeIndex}
+                            />
+                        </SwiperSlide>
+                    ))}
                 </Swiper>
             </div>
-        </div>
+        </section>
     )
 }

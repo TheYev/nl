@@ -8,12 +8,12 @@ type CardProps = {
 
 export const Card = (props: CardProps) => {
     return (
-        <div className={styles.card}>
-            <div className={styles.head}>
-                <h2 className={styles.headText}>{props.headText}</h2>
-                <h2 className={styles.headPercent}>{props.headPercent}</h2>
-            </div>
+        <article className={styles.card}>
+            <header className={styles.head}>
+                <h3 className={styles.headText}>{props.headText}</h3>
+                <p className={styles.headPercent} aria-label={`${props.headText} value`}>{props.headPercent}</p>
+            </header>
             <p className={styles.description}>{props.description}</p>
-        </div>
+        </article>
     )
 }

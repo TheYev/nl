@@ -4,13 +4,14 @@ import { Urls } from "@/utils/Urls";
 
 export const Intro = () => {
   return (
-    <div className={styles.intro}>
+    <section className={styles.intro} aria-label="AI Messaging for OnlyFans and Fansly">
       <Image
         src="block_1.svg"
-        alt="Woman"
+        alt="Woman using AI messaging tool"
         className={styles.image}
         width={510}
         height={510}
+        priority
       />
       <div className={styles.info_block}>
         <h1 className={styles.head}>
@@ -39,6 +40,6 @@ export const Intro = () => {
           Beta access is limited — reserve your spot now.
         </p>
       </div>
-    </div>
+    </section>
   );
 };

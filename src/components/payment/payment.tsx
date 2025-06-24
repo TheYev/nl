@@ -25,62 +25,66 @@ export const Payment = () => {
         fetchPrice()
     }, [accounts, months])
 
-    const handleAccountsChange = (event: any) => {
+    const handleAccountsChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const value = parseInt(event.target.value)
         setAccounts(value > 0 ? value : 1)
     }
 
-    const handleMonthsChange = (event: any) => {
+    const handleMonthsChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const value = parseInt(event.target.value)
         setMonths(value > 0 ? value : 1)
     }
 
     return (
-        <div className={styles.main}>
-            <div className={styles.payment_card}>
+        <section className={styles.main} aria-label="Subscription payment options">
+            <article className={styles.payment_card}>
 
-                <div className={styles.info}>
+                <header className={styles.info}>
                     <h1 className={styles.head}>Affordable Price</h1>
-                    <div className={styles.description}>
+                    <p className={styles.description}>
                         Subscribe to our premium plan and enjoy exclusive benefits.
                         Prices are calculated based on account quantity and billing duration.
-                    </div>
-                </div>
+                    </p>
+                </header>
 
-                <div className={styles.counters}>
+                <form className={styles.counters} aria-label="Pricing options form">
                     <div className={styles.counter}>
-                        <label className={styles.counters_info_text}>Accounts Number</label>
+                        <label htmlFor="accounts" className={styles.counters_info_text}>Accounts Number</label>
                         <input
+                            id="accounts"
                             type="number"
                             value={accounts}
                             min={1}
                             onChange={handleAccountsChange}
                             className={styles.input}
+                            aria-describedby="accounts-desc"
                         />
                     </div>
 
                     <div className={styles.counter}>
-                        <label className={styles.counters_info_text}>Billing Period</label>
+                        <label htmlFor="billingPeriod" className={styles.counters_info_text}>Billing Period</label>
                         <select
+                            id="billingPeriod"
                             value={months}
                             onChange={handleMonthsChange}
                             className={styles.input}
+                            aria-describedby="billing-desc"
                         >
-                            <option className={styles.some} value={1}>1 Months</option>
+                            <option className={styles.some} value={1}>1 Month</option>
                             <option className={styles.some} value={3}>3 Months</option>
                             <option className={styles.some} value={6}>6 Months</option>
                             <option className={styles.some} value={12}>12 Months</option>
                         </select>
                     </div>
-                </div>
+                </form>
 
-                <div className={styles.price_info}>
+                <section className={styles.price_info} aria-live="polite" aria-atomic="true">
                     <div className={styles.price_time}>Price per account / per month</div>
                     <div className={styles.price}>
                         {price !== null ? `$${price}` : 'Error'}
                     </div>
-                </div>
-            </div>
-        </div>
+                </section>
+            </article>
+        </section>
     )
 }

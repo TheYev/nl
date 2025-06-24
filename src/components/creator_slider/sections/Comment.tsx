@@ -8,9 +8,8 @@ type commentProps = {
 }
 
 export const Comment = (props: commentProps) => {
-
     return (
-        <div
+        <article
             className={styles.comment}
             style={{
                 borderRadius: '32px',
@@ -18,21 +17,23 @@ export const Comment = (props: commentProps) => {
                 backgroundColor: props.isActive ? '#fff' : '#ffffff00',
                 border: '3px solid #fff',
                 boxShadow: props.isActive ? '0 0 10px rgba(255, 255, 255, 0)' : 'none',
-
                 transform: `${props.isActive ? 'scale(1)' : 'scale(0.8)'}`,
                 opacity: '0.8',
             }}
+            aria-live={props.isActive ? 'polite' : undefined}
         >
-            <div className={styles.head}>
-                <h1 className={styles.creator}>{props.creator}</h1>
-                <h2 className={styles.creatorPosition}>{props.creatorPosition}</h2>
-            </div>
+            <header className={styles.head}>
+                <h2 className={styles.creator}>{props.creator}</h2>
+                <h3 className={styles.creatorPosition}>{props.creatorPosition}</h3>
+            </header>
             <p
                 className={styles.commentText}
                 style={{
                     WebkitLineClamp: 2,
                 }}
-            >{props.comment}</p>
-        </div>
+            >
+                {props.comment}
+            </p>
+        </article>
     )
 }

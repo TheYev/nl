@@ -39,28 +39,26 @@ export const Different = () => {
   ];
 
   return (
-    <div className={styles.body}>
-      <div className={styles.header_texts}>
+    <section className={styles.body} aria-label="Features that make NeuroLover different">
+      <header className={styles.header_texts}>
         <h1 className={styles.head}>What makes NeuroLover different</h1>
         <p className={styles.subHead}>
           If you’re looking to get some good donations, Neurolover is a
           no-brainer. It will save you some serious time and hassle. But that’s
           not all it’s good for.
         </p>
-      </div>
+      </header>
 
-      <div className={styles.banners}>
-        {banners.map((banner) => {
-          return (
-            <Banner
-              key={banner.head}
-              head={banner.head}
-              description={banner.description}
-              imgPath={banner.imgPath}
-              bgColor={banner.bgColor}
-            />
-          );
-        })}
+      <div className={styles.banners} role="list">
+        {banners.map((banner) => (
+          <Banner
+            key={banner.head}
+            head={banner.head}
+            description={banner.description}
+            imgPath={banner.imgPath}
+            bgColor={banner.bgColor}
+          />
+        ))}
       </div>
 
       <div className={styles.slider}>
@@ -68,21 +66,20 @@ export const Different = () => {
           className={styles.swiperSlider}
           slidesPerView="auto"
           spaceBetween={10}
+          role="list"
         >
-          {banners.map((banner, index) => {
-            return (
-              <SwiperSlide key={index} className={styles.slide}>
-                <Banner
-                  head={banner.head}
-                  description={banner.description}
-                  imgPath={banner.imgPath}
-                  bgColor={banner.bgColor}
-                />
-              </SwiperSlide>
-            );
-          })}
+          {banners.map((banner, index) => (
+            <SwiperSlide key={index} className={styles.slide} role="listitem">
+              <Banner
+                head={banner.head}
+                description={banner.description}
+                imgPath={banner.imgPath}
+                bgColor={banner.bgColor}
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
-    </div>
+    </section>
   );
 };

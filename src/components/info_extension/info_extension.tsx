@@ -47,10 +47,10 @@ export const InfoExtension = () => {
     toolList.find((tool) => tool.head === activeTool)?.img || toolList[0].img;
 
   return (
-    <div className={styles.main}>
-      <div className={styles.background}></div>
+    <section className={styles.main} aria-label="AI-powered tools for content creators">
+      <div className={styles.background} aria-hidden="true"></div>
 
-      <div className={styles.head_block}>
+      <header className={styles.head_block}>
         <h1 className={styles.head}>
           Let AI do the heavy lifting — you stay in control
         </h1>
@@ -59,7 +59,7 @@ export const InfoExtension = () => {
           switching tabs, no setup — just smart, context-aware replies where you
           already work.
         </p>
-      </div>
+      </header>
 
       {/* ---------------------1132px---------------------------------- */}
       <div className={styles.info_block_mobile}>
@@ -68,12 +68,15 @@ export const InfoExtension = () => {
             slidesPerView="auto"
             spaceBetween={4}
             className={`${styles.slider} ${styles.sliderShadow}`}
+            role="list"
           >
             {toolList.map((tool, index) => {
               return (
                 <SwiperSlide
                   key={index}
                   className={cx(styles.mobile_bg, styles.swiperSlide)}
+                  role="listitem"
+                  aria-current={tool.head === activeTool ? "true" : "false"}
                 >
                   <ToolsInfo
                     key={tool.head}
@@ -91,17 +94,18 @@ export const InfoExtension = () => {
         <div className={styles.img_mobile}>
           <Image
             src={currentImg}
-            alt="Tool image"
+            alt={`Image of the ${activeTool} tool`}
             width={1024}
             height={644}
             className={styles.toolImg_mobile}
+            priority
           />
         </div>
       </div>
 
       {/* ---------------------default desktop---------------------------------- */}
       <div className={styles.info_block}>
-        <div className={styles.info}>
+        <div className={styles.info} role="list">
           {toolList.map((tool) => {
             return (
               <ToolsInfo
@@ -118,10 +122,11 @@ export const InfoExtension = () => {
         <div className={styles.img}>
           <Image
             src={currentImg}
-            alt="Tool image"
+            alt={`Image of the ${activeTool} tool`}
             width={1024}
             height={644}
             className={styles.toolImg}
+            priority
           />
         </div>
       </div>
@@ -134,6 +139,6 @@ export const InfoExtension = () => {
           Works with <span className={styles.browsers}>Chrome, dolphin</span>
         </p>
       </div>
-    </div>
+    </section>
   );
 };

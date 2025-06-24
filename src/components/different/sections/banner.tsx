@@ -10,14 +10,15 @@ type BannerProps = {
 
 export const Banner = (props: BannerProps) => {
   return (
-    <div
+    <article
       className={styles.banner}
       style={{
         background: props.bgColor,
       }}
+      aria-label={props.head}
     >
       <div className={styles.main}>
-        <h1 className={styles.head}>{props.head}</h1>
+        <h2 className={styles.head}>{props.head}</h2>
         <p className={styles.description}>{props.description}</p>
       </div>
 
@@ -26,8 +27,9 @@ export const Banner = (props: BannerProps) => {
         src={props.imgPath}
         width={254}
         height={254}
-        alt="IMG"
+        alt={`${props.head} illustration`}
+        priority
       />
-    </div>
+    </article>
   );
 };

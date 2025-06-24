@@ -12,7 +12,7 @@ export const Header = () => {
     <header className={styles.header}>
       <Image src="/logo.svg" width={200} height={44} alt="Logo" />
 
-      <div className={styles.header_nav}>
+      <nav className={styles.header_nav}>
         <a href={Urls.PLUGIN} className={styles.bttn_link}>
           <button className={styles.header_bttn}>Plugin</button>
         </a>
@@ -22,7 +22,7 @@ export const Header = () => {
         <button className={cx(styles.header_bttn, styles.header_bttn_sign_up)}>
           Sign Up
         </button>
-      </div>
+      </nav>
 
       {/* mobile */}
       <div
@@ -33,7 +33,7 @@ export const Header = () => {
       </div>
 
       {menuOpen && (
-        <div className={styles.mobile_dropdown}>
+        <nav className={styles.mobile_dropdown}>
           <a href={Urls.PLUGIN} className={styles.dropdown_link}>
             Plugin
           </a>
@@ -46,7 +46,7 @@ export const Header = () => {
           <a href={Urls.SING_UP} className={styles.dropdown_link}>
             Sign Up
           </a>
-        </div>
+        </nav>
       )}
     </header>
   );
