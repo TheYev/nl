@@ -49,7 +49,7 @@
 .bttn_link::before {
   content: '';
   position: absolute;
-  inset: -7px;
+  inset: 0;
   border: 2px solid transparent;
   border-radius: 40px;
   transition: all 0.3s ease;
@@ -99,7 +99,7 @@
   background-color: #f0f0f0;
 }
 
-@media (max-width: 743px) {
+@media (max-width: 742px) {
   .header {
     padding-block: 20px;
     padding-inline: 16px;

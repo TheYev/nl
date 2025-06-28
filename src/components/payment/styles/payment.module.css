@@ -1,156 +1,166 @@
 .main {
-    display: flex;
-    max-width: 1280px;
-    height: 518px;
-    justify-content: center;
+  max-inline-size: 648px;
+  margin: auto;
 }
 
 .payment_card {
-    display: flex;
-    flex-direction: column;
-    width: 648px;
-    height: 422px;
-    background: linear-gradient(180deg, #00174B 0%, #23013E 100%);
-    border-radius: 32px;
-    gap: 40px;
-    padding: 64px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #00174B 0%, #23013E 100%);
+  border-radius: 32px;
+  gap: 40px;
+  padding: 64px;
 }
 
 .info {
-    display: flex;
-    flex-direction: column;
-    max-width: 520px;
-    max-height: 123px;
-    text-align: center;
-    gap: 8px;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 8px;
+  align-items: center;
 }
 
 .head {
-    font-family: var(--font-syne);
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    text-align: center;
-    color: #FFFFFF;
+  font-family: var(--font-syne);
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  color: #FFFFFF;
+  line-height: 43px;
 }
 
 .description {
-    font-family: var(--font-outfit);
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 0%;
-    text-align: center;
-    color: #FFFFFFCC;
+  font-family: var(--font-outfit);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #FFFFFFCC;
 }
 
 .price_info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.price_time{
-    display: flex;
-    font-family: var(--font-roboto);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 143%;
-    letter-spacing: 0.17px;
-    color:  #FFFFFF;
-    justify-content: center;
-    align-items: center;
+.price_time {
+  display: flex;
+  font-family: var(--font-roboto);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.17px;
+  color: #FFFFFF;
+  justify-content: center;
+  align-items: center;
 }
 
 .price {
-    font-family: var(--font-montserrat);
-    font-weight: 800;
-    font-size: 32px;
-    line-height: 133%;
-    letter-spacing: 0px;
-    text-align: center;
-    color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 133%;
+  text-align: center;
+  color: #FFFFFF;
 }
 
-
 .counters {
-    display: flex;
-    justify-content: space-between;
-    gap: 32px;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
 }
 
 .counter {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    color: white;
-    font-family: var(--font-outfit);
-    font-size: 14px;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  color: white;
+  font-family: var(--font-outfit);
+  font-size: 14px;
+  gap: 8px;
 }
 
 .counters_info_text {
-    font-family: var(--font-roboto);
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 12px;
-    letter-spacing: 0.15px;
-    vertical-align: middle;
-    color: #FFFFFFCC;
+  font-family: var(--font-roboto);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.15px;
+  vertical-align: middle;
+  color: #FFFFFFCC;
 }
 
 .counters_text {
-    font-family: var(--font-roboto);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.15px;
-    color: #FFFFFF;
+  font-family: var(--font-roboto);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #FFFFFF;
 }
 
 .input, .select {
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #3949AB6B;
-    color: white;
-    font-size: 16px;
-    padding: 8px 0;
-    appearance: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #3949AB6B;
+  color: white;
+  font-size: 16px;
+  padding: 8px 0;
+  appearance: none;
 }
 
 .some {
-    color: #000;
+  color: #000;
 }
 
-@media (max-width: 743px) {
-    .payment_card {
-        min-width: 375px;
-        min-height: 448px;
-    }
+@media (max-width: 1132px) {
+  .payment_card {
+    padding: 64px;
+  }
 
-    .counters {
-        flex-direction: column;
-    }
+  .description {
+    font-size: 14px;
+    line-height: 150%;
+  }
 
-    .head {
-        font-family: var(--font-syne);
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 100%;
-        letter-spacing: 0%;
-        text-align: center;
-        width: 295px;
-    }
+  .price_time {
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: 0.17px;
+  }
 
-    .description {
-        width: 295px;
-        font-family: var(--font-outfit);
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 150%;
-        letter-spacing: 0%;
-        text-align: center;
-    }
+  .price {
+    font-size: 32px;
+    line-height: 133.4%;
+  }
+}
+
+@media (max-width: 742px) {
+  .payment_card {
+    padding-block: 32px;
+    padding-inline: 24px;
+  }
+
+  .counters {
+    flex-direction: column;
+  }
+
+  .head {
+    font-family: var(--font-syne);
+    font-weight: 700;
+    text-align: center;
+    width: 295px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .description {
+    width: 295px;
+    font-family: var(--font-outfit);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    text-align: center;
+  }
 }

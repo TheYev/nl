@@ -50,7 +50,7 @@ export const InfoExtension = () => {
     <section className={styles.main} aria-label="AI-powered tools for content creators">
       <div className={styles.background} aria-hidden="true"></div>
 
-      <header className={styles.head_block}>
+      <div className={styles.head_block}>
         <h1 className={styles.head}>
           Let AI do the heavy lifting — you stay in control
         </h1>
@@ -59,7 +59,7 @@ export const InfoExtension = () => {
           switching tabs, no setup — just smart, context-aware replies where you
           already work.
         </p>
-      </header>
+      </div>
 
       {/* ---------------------1132px---------------------------------- */}
       <div className={styles.info_block_mobile}>
@@ -132,7 +132,7 @@ export const InfoExtension = () => {
       </div>
 
       <div className={styles.extension}>
-        <a href={Urls.INSTALL_EXTENTION}>
+        <a href={Urls.INSTALL_EXTENTION} target="_blank">
           <button className={styles.extention_bttn}>Install Extension</button>
         </a>
         <p className={styles.bttn_description}>

@@ -10,14 +10,13 @@
   flex-direction: column;
   text-align: center;
   gap: 16px;
-  padding-bottom: 28px;
+  padding-bottom: 20px;
 }
 
 .header_text {
   font-family: var(--font-syne);
   font-weight: 700;
   font-size: 28px;
-  line-height: 100%;
   text-align: center;
   color: var(--Text-Accent, #381664);
 }
@@ -30,6 +29,15 @@
   text-align: center;
   color: var(--Text-Sec, #00000099);
   max-width: 860px;
+}
+
+.tip {
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0.15px;
+  color: #FFFFFF;
 }
 
 .header_description_highlighted {
@@ -50,6 +58,7 @@
   gap: 20px;
   background-size: auto;
   position: relative;
+  padding: 32px;
 }
 
 .texts {
@@ -67,7 +76,6 @@
   font-family: var(--font-syne);
   font-weight: 700;
   font-size: 44px;
-  line-height: 100%;
 }
 
 .subHeda {
@@ -81,52 +89,59 @@
   letter-spacing: 0.2px;
 }
 
-.highlighted {
+.tipsText {
   font-weight: 700;
-  color: #FFFFFF4D;
+  color: #FFFFFF;
   font-family: var(--font-syne);
+  margin-block-start: 4px;
   font-size: 24px;
-  line-height: 100%;
+  line-height: 29px;
 }
 
 .highlightedWords {
   font-weight: 700;
-  color: #FFFFFF;
   font-family: var(--font-syne);
+  color: #FFFFFF4D;
   font-size: 24px;
-  line-height: 100%;
+  line-height: 29px;
 }
 
 .tips {
   position: absolute;
   color: #fff;
   width: 432px;
-  bottom: 58px;
+  bottom: 32px;
   right: 0;
   display: flex;
   flex-direction: column;
   gap: 23px;
-  padding: 32px;
+  font-family: var(--font-roboto);
+  font-size: 16px;
+  line-height: 160%;
+  font-weight: 700;
+  padding-inline: 32px;
 }
 
 .cards {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
-  padding: 0 24px;
   justify-items: center;
   width: 100%;
   box-sizing: border-box;
 }
 
-@media (max-width: 1133px) {
+@media (max-width: 1132px) {
   .body {
     flex-direction: column;
     justify-content: flex-end;
+    aspect-ratio: 0.6807;
+    padding: 32px;
+    max-height: 974px;
   }
 
   .texts {
-    order: 2;
+    order: 3;
     width: 100%;
   }
 
@@ -134,8 +149,8 @@
     order: 1;
     position: static;
     width: 100%;
-    margin-top: 24px;
-    padding: 32px;
+    gap: 16px;
+    padding-inline: 0;
   }
 
   .cards {
@@ -143,11 +158,31 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
     width: 100%;
-    padding-bottom: 32px;
+    padding: 0;
+    margin-block-start: 46px;
+  }
+
+  .header {
+    padding-block-end: 30px;
+  }
+
+  .header_text {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .highlighted {
+    order: 2;
+  }
+
+  .tipsText,
+  .highlightedWords {
+    font-size: 24px;
+    line-height: 29px;
   }
 }
 
-@media (max-width: 775px) {
+@media (max-width: 742px) {
   .body {
     height: auto;
     background: url("/preferences_bg.svg") no-repeat top right,
@@ -155,13 +190,33 @@
     background-size: contain;
     background-position: top right;
     background-repeat: no-repeat;
+    border-radius: 20px;
+    padding: 16px;
+    gap: 16px;
   }
 
   .cards {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 16px;
+    gap: 20px;
     width: 100%;
-    padding-bottom: 32px;
+    padding: 0;
+  }
+
+  .header_text {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .tips {
+    padding-block-start: 62px;
+    gap: 16px;
+    margin-block-start: 0;
+    padding-inline: 0;
+  }
+
+  .highlighted {
+    font-size: 20px;
+    line-height: 24px;
   }
 }

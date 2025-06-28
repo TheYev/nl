@@ -76,7 +76,7 @@
   }
 }
 
-@media (max-width: 743px) {
+@media (max-width: 742px) {
   .banner {
     flex-direction: column-reverse;
     align-items: center;

@@ -40,14 +40,14 @@ export const Different = () => {
 
   return (
     <section className={styles.body} aria-label="Features that make NeuroLover different">
-      <header className={styles.header_texts}>
+      <div className={styles.header_texts}>
         <h1 className={styles.head}>What makes NeuroLover different</h1>
         <p className={styles.subHead}>
           If you’re looking to get some good donations, Neurolover is a
           no-brainer. It will save you some serious time and hassle. But that’s
           not all it’s good for.
         </p>
-      </header>
+      </div>
 
       <div className={styles.banners} role="list">
         {banners.map((banner) => (

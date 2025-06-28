@@ -9,7 +9,7 @@ export enum Urls {
   GET_EARLY_ACCESS = "/",
 
   // Extention block
-  INSTALL_EXTENTION = "/",
+  INSTALL_EXTENTION = "https://chromewebstore.google.com/detail/neurolover/dmdaogdohfpbhenkhjgmlloganpapoao",
 
   // Footer
   DISCORD = "/",

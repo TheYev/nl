@@ -35,7 +35,7 @@
   background: #FFFFFF;
 }
 
-@media (max-width: 1133px) {
+@media (max-width: 1132px) {
   .toolsInfo {
     width: 100%;
     max-width: 292px;

@@ -108,6 +108,11 @@
   letter-spacing: 0.46px;
   cursor: pointer;
   color: #FFFFFF;
+  border: none;
+}
+
+.extention_bttn:hover {
+  opacity: .8;
 }
 
 .bttn_description {
@@ -239,7 +244,7 @@
   }
 }
 
-@media (max-width: 743px) {
+@media (max-width: 742px) {
   .main {
     margin-inline-end: -32px;
   }
@@ -264,6 +269,7 @@
 
   .info_block_mobile {
     padding-inline-end: 0;
+    gap: 0;
   }
 
   .img_mobile {
@@ -280,5 +286,10 @@
 
   .extension {
     padding-block-start: 32px;
+    gap: 20px;
+  }
+
+  .slider {
+    margin-block: -8px;
   }
 }

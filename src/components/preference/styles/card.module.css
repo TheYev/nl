@@ -2,9 +2,8 @@
   display: flex;
   flex-direction: column;
   width: 368px;
-  height: 130px;
   border-radius: 32px;
-  gap: 23px;
+  gap: 8px;
   padding: 24px;
   background: #FFFFFF1A;
   box-shadow: 34.85px 29.63px 48.34px 0px #3366FF0D;
@@ -14,14 +13,6 @@
 .head {
   display: flex;
   justify-content: space-between;
-}
-
-.headPercent {
-  font-family: var(--font-poppins);
-  color: #fff;
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 32px;
 }
 
 .headText {
@@ -38,26 +29,34 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 130%;
-  text-align: justify;
+  text-align: left;
 }
 
-@media (max-width: 1133px) {
+@media (max-width: 1132px) {
   .card {
     width: 100%;
     min-width: 280px;
+    padding-block: 37px;
   }
-}
 
-@media (max-width: 775px) {
   .headText {
-    font-size: 20px;
-  }
-
-  .headPercent {
-    font-size: 20px;
+    font-size: 24px;
+    line-height: 32px;
   }
 
   .description {
-    font-size: 16PX;
+    font-size: 16px;
+    line-height: 130%
+  }
+}
+
+@media (max-width: 742px) {
+  .headText {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .description {
+    font-size: 16px;
   }
 }
