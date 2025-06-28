@@ -33,20 +33,40 @@ export const Header = () => {
       </div>
 
       {menuOpen && (
-        <nav className={styles.mobile_dropdown}>
-          <a href={Urls.PLUGIN} className={styles.dropdown_link}>
-            Plugin
-          </a>
-          <a href={Urls.LEGAL} className={styles.dropdown_link}>
-            Legal
-          </a>
-          <a href={Urls.PRICING} className={styles.dropdown_link}>
-            Pricing
-          </a>
-          <a href={Urls.SING_UP} className={styles.dropdown_link}>
-            Sign Up
-          </a>
-        </nav>
+        <div className={styles.mobile_fullscreen_menu}>
+          <div className={styles.mobile_menu_header}>
+            <Image src="/logo_white.svg" width={200} height={44} alt="Logo" className={styles.close_button} />
+            <button
+              className={styles.close_button}
+              onClick={() => setMenuOpen(false)}
+            >
+              <Image src="/close.svg" width={60} height={28} alt="Menu" />
+            </button>
+          </div>
+
+          <nav className={styles.mobile_menu_content}>
+            <a
+              href={Urls.PLUGIN}
+              onClick={() => setMenuOpen(false)}
+              className={styles.mobile_link}>
+              Plugin
+            </a>
+            <a
+              href={Urls.PRICING}
+              onClick={() => setMenuOpen(false)}
+              className={styles.mobile_link}>
+              Pricing
+            </a>
+            <a
+              href={Urls.SING_UP}
+              className={styles.mobile_sign_up}
+              onClick={() => setMenuOpen(false)}
+            >
+              Sign Up
+            </a>
+          </nav>
+
+        </div>
       )}
     </header>
   );
