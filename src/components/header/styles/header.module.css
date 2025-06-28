@@ -5,7 +5,7 @@
   border-bottom: 1px solid #440A8F;
   padding: 20px 50px;
   position: relative;
-  z-index: 1;
+  z-index: 1000;
 }
 
 .header_nav {
@@ -86,7 +86,7 @@
   justify-content: flex-start;
   align-items: center;
   padding: 20px;
-  z-index: 1000;
+  z-index: 10000;
 }
 
 .mobile_menu_header {
@@ -159,4 +159,8 @@
   .mobile_menu_icon {
     display: block;
   }
+}
+
+.no-scroll {
+  overflow: hidden;
 }
