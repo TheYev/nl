@@ -10,11 +10,18 @@ import {
   RobotoFont,
   MontserratFont,
 } from "@/utils/fonts";
+import { Seo } from "@/components/seo/seo";
 
 export const metadata: Metadata = {
-  title: "NEUROLOVER",
+  title: {
+    default: "NEUROLOVER", 
+    template: "%s - NEUROLOVER"
+  },
   description: "NEUROLOVER landing page.",
   keywords: "NEUROLOVER, onlyfans, extension",
+  twitter: {
+    card: "summary_large_image"
+  }
 };
 
 export default function RootLayout({
@@ -24,7 +31,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* add to body ${PoppinsFont.variable} - used on different/banner */}
+      <Seo
+        title="NEUROLOVER"
+        description="NEUROLOVER landing page."
+        keywords="NEUROLOVER, onlyfans, extension"
+      />
       <body
         className={`
           ${OutfitFont.variable} 
