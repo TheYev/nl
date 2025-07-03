@@ -225,6 +225,7 @@
   .footer {
     flex-direction: column-reverse;
     align-items: center;
+    padding-inline: 16px;
   }
 
   .footer_header {
