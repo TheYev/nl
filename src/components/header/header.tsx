@@ -1,12 +1,25 @@
 "use client";
 import cx from "classnames";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./styles/header.module.css";
 import { Urls } from "@/utils/Urls";
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const body = document.body;
+
+    if (menuOpen) {
+      body.style.position = "fixed";
+    } else {
+      body.style.position = "";
+    }
+    return () => {
+      body.style.position = "";
+    };
+  }, [menuOpen]);
 
   return (
     <header className={styles.header}>
