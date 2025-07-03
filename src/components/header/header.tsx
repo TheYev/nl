@@ -48,7 +48,13 @@ export const Header = () => {
       {menuOpen && (
         <div className={styles.mobile_fullscreen_menu}>
           <div className={styles.mobile_menu_header}>
-            <Image src="/logo_white.svg" width={200} height={44} alt="Logo" className={styles.close_button} />
+            <Image
+              src="/logo_white.svg"
+              width={200}
+              height={44}
+              alt="Logo"
+              className={styles.close_button}
+            />
             <button
               className={styles.close_button}
               onClick={() => setMenuOpen(false)}
@@ -61,13 +67,15 @@ export const Header = () => {
             <a
               href={Urls.PLUGIN}
               onClick={() => setMenuOpen(false)}
-              className={styles.mobile_link}>
+              className={styles.mobile_link}
+            >
               Plugin
             </a>
             <a
               href={Urls.PRICING}
               onClick={() => setMenuOpen(false)}
-              className={styles.mobile_link}>
+              className={styles.mobile_link}
+            >
               Pricing
             </a>
             <a
@@ -78,7 +86,6 @@ export const Header = () => {
               Sign Up
             </a>
           </nav>
-
         </div>
       )}
     </header>

@@ -39,7 +39,10 @@ export const Different = () => {
   ];
 
   return (
-    <section className={styles.body} aria-label="Features that make NeuroLover different">
+    <section
+      className={styles.body}
+      aria-label="Features that make NeuroLover different"
+    >
       <div className={styles.header_texts}>
         <h1 className={styles.head}>What makes NeuroLover different</h1>
         <p className={styles.subHead}>

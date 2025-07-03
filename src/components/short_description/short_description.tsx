@@ -4,7 +4,10 @@ import Image from "next/image";
 
 export const ShortDescription = () => {
   return (
-    <section className={styles.body} aria-label="Common challenges creators face">
+    <section
+      className={styles.body}
+      aria-label="Common challenges creators face"
+    >
       <div className={styles.main}>
         <div className={styles.main_info}>
           <h1 className={styles.header}>

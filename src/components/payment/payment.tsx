@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./styles/payment.module.css";
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 
 export const Payment = () => {
   const [accounts, setAccounts] = useState(1);
@@ -41,8 +41,9 @@ export const Payment = () => {
         <div className={styles.info}>
           <h1 className={styles.head}>Affordable Price</h1>
           <p className={styles.description}>
-            Subscribe to our premium plan and enjoy exclusive benefits. Prices start at $39 per account. Discounts apply
-            for larger bundles and longer subscription periods
+            Subscribe to our premium plan and enjoy exclusive benefits. Prices
+            start at $39 per account. Discounts apply for larger bundles and
+            longer subscription periods
           </p>
         </div>
 

@@ -47,7 +47,10 @@ export const InfoExtension = () => {
     toolList.find((tool) => tool.head === activeTool)?.img || toolList[0].img;
 
   return (
-    <section className={styles.main} aria-label="AI-powered tools for content creators">
+    <section
+      className={styles.main}
+      aria-label="AI-powered tools for content creators"
+    >
       <div className={styles.background} aria-hidden="true"></div>
 
       <div className={styles.head_block}>

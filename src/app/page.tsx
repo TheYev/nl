@@ -5,7 +5,7 @@ import { InfoExtension } from "@/components/info_extension/info_extension";
 import { Preference } from "@/components/preference/preference";
 import { CreatorSlider } from "@/components/creator_slider/creator_slider";
 
-import "@/styles/globals.css"
+import "@/styles/globals.css";
 import styles from "./app.module.css";
 import { Payment } from "@/components/payment/payment";
 

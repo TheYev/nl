@@ -14,14 +14,14 @@ import { Seo } from "@/components/seo/seo";
 
 export const metadata: Metadata = {
   title: {
-    default: "NEUROLOVER", 
-    template: "%s - NEUROLOVER"
+    default: "NEUROLOVER",
+    template: "%s - NEUROLOVER",
   },
   description: "NEUROLOVER landing page.",
   keywords: "NEUROLOVER, onlyfans, extension",
   twitter: {
-    card: "summary_large_image"
-  }
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({

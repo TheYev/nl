@@ -4,7 +4,10 @@ import { Urls } from "@/utils/Urls";
 
 export const Intro = () => {
   return (
-    <section className={styles.intro} aria-label="AI Messaging for OnlyFans and Fansly">
+    <section
+      className={styles.intro}
+      aria-label="AI Messaging for OnlyFans and Fansly"
+    >
       <Image
         src="block_1.svg"
         alt="Woman using AI messaging tool"
