@@ -9,6 +9,11 @@
   cursor: pointer;
   background: #FFFFFF26;
   box-shadow: 0 4px 48px 0 #0000001A;
+  transition: all 0.3s ease;
+}
+
+.toolsInfo:hover {
+  scale: 1.01;
 }
 
 .header {

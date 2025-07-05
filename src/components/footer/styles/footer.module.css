@@ -48,7 +48,8 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border: 0px;
+  border: 0;
+  transition: all 0.3s ease;
 }
 
 .access_bttn:hover {
@@ -113,6 +114,11 @@
   font-size: 12px;
   line-height: 32px;
   color: #FFFFFFCC;
+  transition: all 0.3s ease;
+}
+
+.links:hover {
+  opacity: 0.8;
 }
 
 .social {
@@ -125,6 +131,12 @@
   display: flex;
   gap: 36px;
   align-items: center;
+}
+
+.images_midle a:hover,
+.images a:hover {
+  opacity: 0.8;
+  transition: all 0.3s ease;
 }
 
 
