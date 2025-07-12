@@ -108,6 +108,12 @@
   font-size: 16px;
   padding: 8px 0;
   appearance: none;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input:focus, .select:focus {
+  border-bottom: 2px solid #3949abb3;
 }
 
 .some {

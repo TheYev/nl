@@ -110,6 +110,7 @@
   cursor: pointer;
   color: #FFFFFF;
   border: none;
+  transition: all 0.3s ease;
 }
 
 .extention_bttn:hover {
