@@ -6,7 +6,7 @@ import styles from "./styles/creator_slider.module.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import './styles/swiper-overrides.css';
+import "./styles/swiper-overrides.css";
 
 export const CreatorSlider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
