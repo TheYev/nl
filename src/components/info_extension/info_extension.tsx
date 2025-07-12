@@ -126,8 +126,8 @@ export const InfoExtension = () => {
           <Image
             src={currentImg}
             alt={`Image of the ${activeTool} tool`}
-            width={1024}
-            height={644}
+            width={1344}
+            height={845}
             className={styles.toolImg}
             priority
           />

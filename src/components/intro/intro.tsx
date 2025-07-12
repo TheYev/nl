@@ -12,8 +12,8 @@ export const Intro = () => {
         src="block_1.svg"
         alt="Woman using AI messaging tool"
         className={styles.image}
-        width={510}
-        height={510}
+        width={710}
+        height={710}
         priority
       />
       <div className={styles.info_block}>

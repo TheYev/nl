@@ -1,12 +1,18 @@
 .layout {
   box-sizing: content-box;
-  max-width: 1280px;
+  max-width: 1600px;
   margin: auto;
   padding-inline: 96px;
   display: flex;
   flex-direction: column;
   gap: 64px;
   padding-block-end: 64px;
+}
+
+@media (max-width: 1920px) {
+  .layout {
+      max-width: 1280px;
+  }
 }
 
 @media (max-width: 1132px) {

@@ -6,6 +6,7 @@ import styles from "./styles/creator_slider.module.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import './styles/swiper-overrides.css';
 
 export const CreatorSlider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -29,6 +30,18 @@ export const CreatorSlider = () => {
       comment:
         "“It sounds exactly like me — fans didn’t even notice I wasn’t typing!”",
     },
+    {
+      creator: "222",
+      creatorPosition: "Top 2% OnlyFans",
+      comment:
+        "“It sounds exactly like me — fans didn’t even notice I wasn’t typing!”",
+    },
+    {
+      creator: "222",
+      creatorPosition: "Top 2% OnlyFans",
+      comment:
+        "“It sounds exactly like me — fans didn’t even notice I wasn’t typing!”",
+    },
   ];
 
   return (
@@ -42,9 +55,10 @@ export const CreatorSlider = () => {
           centeredSlides={true}
           slidesPerView="auto"
           spaceBetween={1}
-          onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           className={styles.slider}
           role="list"
+          loop={true}
         >
           {slides.map((slide, index) => (
             <SwiperSlide
