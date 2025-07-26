@@ -1,3 +1,6 @@
+/* Tools Info Component Styles */
+
+/* Основний контейнер інструменту */
 .toolsInfo {
   display: flex;
   flex-direction: column;
@@ -7,8 +10,8 @@
   padding: 8px 12px;
   border-radius: 12px;
   cursor: pointer;
-  background: #FFFFFF26;
-  box-shadow: 0 4px 48px 0 #0000001A;
+  background: #ffffff26;
+  box-shadow: 0 4px 48px 0 #0000001a;
   transition: all 0.3s ease;
 }
 
@@ -16,6 +19,7 @@
   scale: 1.01;
 }
 
+/* Заголовок інструменту */
 .header {
   font-family: var(--font-outfit);
   font-weight: 500;
@@ -23,29 +27,31 @@
   line-height: 26px;
 }
 
+/* Опис інструменту */
 .desciption {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 160%;
   color: #00000099;
 }
 
+/* Активний стан */
 .active {
   width: 240px;
   height: auto;
   gap: 4px;
   border-radius: 12px;
   padding: 8px 12px;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
+/* Адаптивність */
 @media (max-width: 1132px) {
   .toolsInfo {
     width: 100%;
     max-width: 292px;
     block-size: 100%;
-
     gap: 4px;
     padding: 8px 12px;
     border-radius: 12px;
@@ -57,6 +63,6 @@
     gap: 4px;
     border-radius: 12px;
     padding: 8px 12px;
-    background: #FFFFFF;
+    background: #ffffff;
   }
 }

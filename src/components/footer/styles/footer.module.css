@@ -2,8 +2,8 @@
   display: flex;
   gap: 40px;
   margin: 0 auto;
-  background: linear-gradient(180deg, #00174B 0%, #23013E 100%);
-  color: #FFFFFF;
+  background: linear-gradient(180deg, #00174b 0%, #23013e 100%);
+  color: #ffffff;
   justify-content: space-between;
   padding: 24px 96px;
 }
@@ -56,7 +56,7 @@
 }
 
 .description {
-  color: #FFFFFFCC;
+  color: #ffffffcc;
 
   font-family: var(--font-outfit);
   font-weight: 400;
@@ -69,7 +69,7 @@
 }
 
 .company_name {
-  font-family: var(--font-mulish);;
+  font-family: var(--font-mulish);
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -112,7 +112,7 @@
   font-weight: 600;
   font-size: 12px;
   line-height: 32px;
-  color: #FFFFFFCC;
+  color: #ffffffcc;
   transition: all 0.3s ease;
 }
 
@@ -137,7 +137,6 @@
   opacity: 0.8;
   transition: all 0.3s ease;
 }
-
 
 .info_desciption_midle {
   display: none;

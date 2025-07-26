@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #440A8F;
+  border-bottom: 1px solid #440a8f;
   padding: 20px 50px;
   position: relative;
   z-index: 1000;
@@ -24,7 +24,7 @@
 }
 
 .bttn_link::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   border: 2px solid transparent;
@@ -34,13 +34,13 @@
 }
 
 .bttn_link:hover::before {
-  border-color: #673AB780;
-  background-color: #673AB70A;
+  border-color: #673ab780;
+  background-color: #673ab70a;
 }
 
 .header_bttn {
   background: transparent;
-  color: #512DA8;
+  color: #512da8;
   border: none;
   cursor: pointer;
 
@@ -80,7 +80,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, #00174B 0%, #23013E 100%);
+  background: linear-gradient(180deg, #00174b 0%, #23013e 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -144,7 +144,6 @@
 .mobile_sign_up:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
-
 
 @media (max-width: 742px) {
   .header {

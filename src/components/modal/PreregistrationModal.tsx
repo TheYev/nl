@@ -1,19 +1,83 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, memo } from "react";
 import { createPortal } from "react-dom";
 import { submitPreregistration } from "@/utils/api";
 import styles from "./styles/modal.module.css";
 
+/**
+ * Email regex для валідації
+ */
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+const CLOSE_ICON = (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M18 6L6 18M6 6L18 18"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const SUCCESS_ICON = (
+  <svg
+    width="48"
+    height="48"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+      stroke="#4CAF50"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const TEXT = {
+  title: "Get Early Access",
+  description:
+    "Be among the first to experience AI-powered messaging for OnlyFans & Fansly creators.",
+  label: "Email Address",
+  placeholder: "Enter your email",
+  submit: "Join Early Access",
+  submitting: "Submitting...",
+  disclaimer:
+    "We'll only use your email to notify you about early access availability.",
+  errorEmpty: "Please enter your email address",
+  errorInvalid: "Please enter a valid email address",
+  errorSubmit: "Failed to submit. Please try again.",
+  successTitle: "Success!",
+  successMsg:
+    "You've been added to our early access list. We'll notify you when it's ready!",
+};
+
+/**
+ * @param {Object} props
+ * @param {boolean} props.isOpen
+ * @param {() => void} props.onClose
+ */
 interface PreregistrationModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-export const PreregistrationModal = ({
+export const PreregistrationModal = memo(function PreregistrationModal({
   isOpen,
   onClose,
-}: PreregistrationModalProps) => {
+}: PreregistrationModalProps) {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -31,39 +95,33 @@ export const PreregistrationModal = ({
     } else {
       document.body.style.overflow = "unset";
     }
-
     return () => {
       document.body.style.overflow = "unset";
     };
   }, [isOpen]);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     if (!email.trim()) {
-      setError("Please enter your email address");
+      setError(TEXT.errorEmpty);
       return;
     }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      setError("Please enter a valid email address");
+    if (!EMAIL_REGEX.test(email)) {
+      setError(TEXT.errorInvalid);
       return;
     }
-
     setIsLoading(true);
     setError(null);
-
     try {
-      await submitPreregistration(email);
+      await submitPreregistration(email.trim());
       setSuccess(true);
       setTimeout(() => {
         onClose();
         setSuccess(false);
         setEmail("");
       }, 2000);
-    } catch (error) {
-      setError("Failed to submit. Please try again.");
+    } catch {
+      setError(TEXT.errorSubmit);
     } finally {
       setIsLoading(false);
     }
@@ -82,66 +140,41 @@ export const PreregistrationModal = ({
 
   const modalContent = (
     <div className={styles.overlay} onClick={handleClose}>
-      <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
+      <main
+        className={styles.modal}
+        onClick={(e) => e.stopPropagation()}
+        aria-modal="true"
+        role="dialog"
+      >
         <button
           className={styles.closeButton}
           onClick={handleClose}
           aria-label="Close modal"
           disabled={isLoading}
+          type="button"
         >
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M18 6L6 18M6 6L18 18"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+          {CLOSE_ICON}
         </button>
-
-        <div className={styles.content}>
+        <section className={styles.content}>
           {success ? (
-            <div className={styles.success}>
-              <svg
-                width="48"
-                height="48"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
-                  stroke="#4CAF50"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              <h2>Success!</h2>
-              <p>
-                You've been added to our early access list. We'll notify you
-                when it's ready!
-              </p>
+            <div className={styles.success} aria-live="polite">
+              {SUCCESS_ICON}
+              <h2>{TEXT.successTitle}</h2>
+              <p>{TEXT.successMsg}</p>
             </div>
           ) : (
             <>
-              <h2 className={styles.title}>Get Early Access</h2>
-              <p className={styles.description}>
-                Be among the first to experience AI-powered messaging for
-                OnlyFans & Fansly creators.
-              </p>
-
-              <form onSubmit={handleSubmit} className={styles.form}>
+              <h2 className={styles.title}>{TEXT.title}</h2>
+              <p className={styles.description}>{TEXT.description}</p>
+              <form
+                onSubmit={handleSubmit}
+                className={styles.form}
+                autoComplete="off"
+                noValidate
+              >
                 <div className={styles.inputGroup}>
                   <label htmlFor="email" className={styles.label}>
-                    Email Address
+                    {TEXT.label}
                   </label>
                   <input
                     id="email"
@@ -149,40 +182,42 @@ export const PreregistrationModal = ({
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className={styles.input}
-                    placeholder="Enter your email"
+                    placeholder={TEXT.placeholder}
                     disabled={isLoading}
                     required
+                    autoFocus
+                    aria-required="true"
+                    aria-label={TEXT.label}
                   />
                 </div>
-
-                {error && <div className={styles.error}>{error}</div>}
-
+                {error && (
+                  <div className={styles.error} aria-live="assertive">
+                    {error}
+                  </div>
+                )}
                 <button
                   type="submit"
                   className={styles.submitButton}
                   disabled={isLoading}
+                  aria-busy={isLoading}
                 >
                   {isLoading ? (
                     <>
-                      <div className={styles.spinner}></div>
-                      Submitting...
+                      <div className={styles.spinner} aria-hidden="true"></div>
+                      {TEXT.submitting}
                     </>
                   ) : (
-                    "Join Early Access"
+                    TEXT.submit
                   )}
                 </button>
               </form>
-
-              <p className={styles.disclaimer}>
-                We'll only use your email to notify you about early access
-                availability.
-              </p>
+              <p className={styles.disclaimer}>{TEXT.disclaimer}</p>
             </>
           )}
-        </div>
-      </div>
+        </section>
+      </main>
     </div>
   );
 
   return createPortal(modalContent, document.body);
-};
+});

@@ -1,3 +1,6 @@
+/* Short Description Component Styles */
+
+/* Основний контейнер */
 .body {
   display: flex;
   flex-direction: column;
@@ -5,17 +8,19 @@
   width: 100%;
 }
 
+/* Основний блок */
 .main {
   display: flex;
   justify-content: space-between;
   border-radius: 56px;
-  background: linear-gradient(165.7deg, #0A0C43 10%, #101258 41.77%);
+  background: linear-gradient(165.7deg, #0a0c43 10%, #101258 41.77%);
   color: #fff;
   overflow: hidden;
   width: 100%;
   position: relative;
 }
 
+/* Інформаційна секція */
 .main_info {
   display: flex;
   flex-direction: column;
@@ -28,6 +33,7 @@
   z-index: 1;
 }
 
+/* Заголовок */
 .header {
   font-family: var(--font-syne);
   font-weight: 700;
@@ -35,14 +41,16 @@
   line-height: 43px;
 }
 
+/* Опис */
 .description {
   font-family: var(--font-outfit);
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
-  color: #FFFFFFCC;
+  color: #ffffffcc;
 }
 
+/* Зображення (десктоп) */
 .main_img {
   border-radius: 0 56px 56px 0;
   top: -36px;
@@ -54,6 +62,12 @@
   width: 62.5%;
 }
 
+/* Зображення (мобільне) */
+.main_img_mobile {
+  display: none;
+}
+
+/* Колекція карток */
 .card_collection {
   display: flex;
   flex-wrap: wrap;
@@ -61,10 +75,7 @@
   padding-block: 4px;
 }
 
-.main_img_mobile {
-  display: none;
-}
-
+/* Адаптивність */
 @media (max-width: 1250px) {
   .main {
     position: relative;
@@ -143,7 +154,7 @@
 
 @media (max-width: 742px) {
   .main {
-    background: linear-gradient(180deg, #00174B 0%, #23013E 100%);
+    background: linear-gradient(180deg, #00174b 0%, #23013e 100%);
     height: auto;
     max-height: 100%;
     padding: 24px;
@@ -186,4 +197,3 @@
     margin-block: 18px;
   }
 }
-

@@ -1,3 +1,6 @@
+/* Preference Component Styles */
+
+/* Основний контейнер */
 .main {
   display: flex;
   flex-direction: column;
@@ -5,6 +8,7 @@
   align-items: center;
 }
 
+/* Заголовок */
 .header {
   display: flex;
   flex-direction: column;
@@ -31,36 +35,27 @@
   max-width: 860px;
 }
 
-.tip {
-  font-family: 'Roboto';
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 160%;
-  letter-spacing: 0.15px;
-  color: #FFFFFF;
-}
-
 .header_description_highlighted {
   font-weight: 700;
   color: var(--Text-Accent, #381664);
 }
 
+/* Основний контент */
 .body {
   display: flex;
   width: 100%;
   height: 100%;
   border-radius: 56px;
-  background: url("/preferences_bg.svg") no-repeat top right,
-  linear-gradient(175.85deg, #010E2E 2.13%, #041536 95.03%);
-  /* background-size: contain; */
-  /* background-position: top right; */
-  /* background-repeat: no-repeat; */
+  background:
+    url("/preferences_bg.svg") no-repeat top right,
+    linear-gradient(175.85deg, #010e2e 2.13%, #041536 95.03%);
   gap: 20px;
   background-size: auto;
   position: relative;
   padding: 32px;
 }
 
+/* Текстові елементи */
 .texts {
   display: flex;
   flex-direction: column;
@@ -69,43 +64,17 @@
   text-align: center;
 }
 
-.head {
-  top: 46px;
-  left: 55px;
-  color: #FFFFFF;
-  font-family: var(--font-syne);
-  font-weight: 700;
-  font-size: 44px;
+/* Сітка карток */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  justify-items: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.subHeda {
-  color: #FFFFFFB2;
-  top: 172px;
-  left: 55px;
-  font-family: var(--font-poppins);
-  font-weight: 400;
-  font-size: 26.88px;
-  line-height: 160%;
-  letter-spacing: 0.2px;
-}
-
-.tipsText {
-  font-weight: 700;
-  color: #FFFFFF;
-  font-family: var(--font-syne);
-  margin-block-start: 4px;
-  font-size: 24px;
-  line-height: 29px;
-}
-
-.highlightedWords {
-  font-weight: 700;
-  font-family: var(--font-syne);
-  color: #FFFFFF4D;
-  font-size: 24px;
-  line-height: 29px;
-}
-
+/* Бічна панель з чайовими */
 .tips {
   position: absolute;
   color: #fff;
@@ -122,15 +91,24 @@
   padding-inline: 32px;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  justify-items: center;
-  width: 100%;
-  box-sizing: border-box;
+.tipsText {
+  font-weight: 700;
+  color: #ffffff;
+  font-family: var(--font-syne);
+  margin-block-start: 4px;
+  font-size: 24px;
+  line-height: 29px;
 }
 
+.highlightedWords {
+  font-weight: 700;
+  font-family: var(--font-syne);
+  color: #ffffff4d;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+/* Адаптивність */
 @media (max-width: 1132px) {
   .body {
     flex-direction: column;
@@ -171,10 +149,6 @@
     line-height: 34px;
   }
 
-  .highlighted {
-    order: 2;
-  }
-
   .tipsText,
   .highlightedWords {
     font-size: 24px;
@@ -185,8 +159,9 @@
 @media (max-width: 742px) {
   .body {
     height: auto;
-    background: url("/preferences_bg.svg") no-repeat top right,
-    linear-gradient(175.85deg, #010E2E 2.13%, #041536 95.03%);
+    background:
+      url("/preferences_bg.svg") no-repeat top right,
+      linear-gradient(175.85deg, #010e2e 2.13%, #041536 95.03%);
     background-size: contain;
     background-position: top right;
     background-repeat: no-repeat;
@@ -214,10 +189,5 @@
     gap: 16px;
     margin-block-start: 0;
     padding-inline: 0;
-  }
-
-  .highlighted {
-    font-size: 20px;
-    line-height: 24px;
   }
 }

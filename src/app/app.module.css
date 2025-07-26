@@ -1,3 +1,6 @@
+/* App Layout Styles */
+
+/* Основний layout контейнер */
 .layout {
   box-sizing: content-box;
   max-width: 1600px;
@@ -9,6 +12,7 @@
   padding-block-end: 96px;
 }
 
+/* Адаптивність */
 @media (max-width: 1920px) {
   .layout {
     gap: calc(56px * 2);

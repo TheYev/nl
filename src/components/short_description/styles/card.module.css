@@ -1,19 +1,23 @@
+/* Card Component Styles */
+
+/* Основний контейнер картки */
 .card {
   display: inline-flex;
-  background: #CBB8E01F;
+  background: #cbb8e01f;
   padding: 12px;
   padding-inline-start: 16px;
   border-radius: 20px;
-  border: 1.5px solid #0000001A;
+  border: 1.5px solid #0000001a;
   align-items: center;
   gap: 16px;
   white-space: nowrap;
   font-family: var(--font-poppins);
   font-weight: 600;
   font-size: 16px;
-  line-height: 32px
+  line-height: 32px;
 }
 
+/* Адаптивність */
 @media (max-width: 742px) {
   .card {
     font-size: 12px;

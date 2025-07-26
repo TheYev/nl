@@ -1,93 +1,162 @@
 "use client";
+
+import { memo, useState, useEffect } from "react";
+import Link from "next/link";
 import cx from "classnames";
-import { useState, useEffect } from "react";
-import Image from "next/image";
 import styles from "./styles/header.module.css";
-import { Urls } from "@/utils/Urls";
 
-export const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+// Константи
+const TEXT = {
+  logoAlt: "NeuroLover Logo",
+  signUp: "Sign Up",
+  mobileMenuOpen: "Open mobile menu",
+  mobileMenuClose: "Close mobile menu",
+} as const;
 
+const NAV_LINKS = [
+  { label: "Plugin", href: "/" },
+  { label: "Legal", href: "/" },
+  { label: "Pricing", href: "/" },
+] as const;
+
+// Основний компонент
+export const Header = memo(() => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Блокування скролу при відкритому мобільному меню
   useEffect(() => {
-    const body = document.body;
-
-    if (menuOpen) {
-      body.style.position = "fixed";
+    if (isMobileMenuOpen) {
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
     } else {
-      body.style.position = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
     }
+
     return () => {
-      body.style.position = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
     };
-  }, [menuOpen]);
+  }, [isMobileMenuOpen]);
+
+  const handleToggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleCloseMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <header className={styles.header}>
-      <Image src="/logo.svg" width={200} height={44} alt="Logo" />
+      <nav className={styles.nav} aria-label="Main navigation">
+        <Link
+          href="/"
+          tabIndex={0}
+          aria-label={TEXT.logoAlt}
+          className={styles.logo_link}
+        >
+          <img
+            src="/logo.svg"
+            alt={TEXT.logoAlt}
+            className={styles.logo}
+            width={120}
+            height={40}
+          />
+        </Link>
 
-      <nav className={styles.header_nav}>
-        <a href={Urls.PLUGIN} className={styles.bttn_link}>
-          <button className={styles.header_bttn}>Plugin</button>
-        </a>
-        <a href={Urls.PRICING} className={styles.bttn_link}>
-          <button className={styles.header_bttn}>Pricing</button>
-        </a>
-        <button className={cx(styles.header_bttn, styles.header_bttn_sign_up)}>
-          Sign Up
+        <div className={styles.nav_links}>
+          {NAV_LINKS.map((link) => (
+            <button
+              key={link.label}
+              className={styles.header_bttn}
+              aria-label={link.label}
+              type="button"
+            >
+              {link.label}
+            </button>
+          ))}
+          <button
+            className={cx(styles.header_bttn, styles.header_bttn_sign_up)}
+            aria-label={TEXT.signUp}
+            type="button"
+          >
+            {TEXT.signUp}
+          </button>
+        </div>
+
+        <button
+          className={styles.mobile_menu_button}
+          onClick={handleToggleMobileMenu}
+          aria-label={isMobileMenuOpen ? TEXT.mobileMenuClose : TEXT.mobileMenuOpen}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-menu"
+          type="button"
+        >
+          <img
+            src="/mob_menu.svg"
+            alt=""
+            className={styles.mobile_menu_icon}
+            width={24}
+            height={24}
+          />
         </button>
       </nav>
 
-      {/* mobile */}
-      <div
-        className={styles.mobile_menu_icon}
-        onClick={() => setMenuOpen(!menuOpen)}
-      >
-        <Image src="/mob_menu.svg" width={12} height={12} alt="Menu" />
-      </div>
-
-      {menuOpen && (
-        <div className={styles.mobile_fullscreen_menu}>
-          <div className={styles.mobile_menu_header}>
-            <Image
-              src="/logo_white.svg"
-              width={200}
-              height={44}
-              alt="Logo"
-              className={styles.close_button}
-            />
+      {/* Мобільне меню */}
+      {isMobileMenuOpen && (
+        <div
+          className={styles.mobile_fullscreen_menu}
+          id="mobile-menu"
+          role="dialog"
+          aria-modal="true"
+        >
+          <div className={styles.mobile_menu_overlay} onClick={handleCloseMobileMenu} />
+          <div
+            className={styles.mobile_menu_content}
+            aria-label="Mobile navigation"
+          >
             <button
-              className={styles.close_button}
-              onClick={() => setMenuOpen(false)}
+              className={styles.mobile_menu_close}
+              onClick={handleCloseMobileMenu}
+              aria-label={TEXT.mobileMenuClose}
+              type="button"
             >
-              <Image src="/close.svg" width={60} height={28} alt="Menu" />
+              <img
+                src="/close.svg"
+                alt=""
+                className={styles.close_icon}
+                width={24}
+                height={24}
+              />
             </button>
-          </div>
 
-          <nav className={styles.mobile_menu_content}>
-            <a
-              href={Urls.PLUGIN}
-              onClick={() => setMenuOpen(false)}
-              className={styles.mobile_link}
-            >
-              Plugin
-            </a>
-            <a
-              href={Urls.PRICING}
-              onClick={() => setMenuOpen(false)}
-              className={styles.mobile_link}
-            >
-              Pricing
-            </a>
-            <a
-              href={Urls.SING_UP}
-              className={styles.mobile_sign_up}
-              onClick={() => setMenuOpen(false)}
-            >
-              Sign Up
-            </a>
-          </nav>
+            <div className={styles.mobile_nav_links}>
+              {NAV_LINKS.map((link) => (
+                <button
+                  key={link.label}
+                  className={styles.mobile_nav_link}
+                  onClick={handleCloseMobileMenu}
+                  aria-label={link.label}
+                  type="button"
+                >
+                  {link.label}
+                </button>
+              ))}
+              <button
+                className={cx(styles.mobile_nav_link, styles.mobile_sign_up)}
+                onClick={handleCloseMobileMenu}
+                aria-label={TEXT.signUp}
+                type="button"
+              >
+                {TEXT.signUp}
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </header>
   );
-};
+});
+
+Header.displayName = "Header";

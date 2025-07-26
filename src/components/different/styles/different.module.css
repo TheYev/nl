@@ -1,3 +1,6 @@
+/* Different Component Styles */
+
+/* Основний контейнер */
 .body {
   display: flex;
   flex-direction: column;
@@ -6,12 +9,13 @@
   align-items: center;
 }
 
+/* Заголовок та підзаголовок */
 .header_texts {
-    text-align: center;
-    flex-direction: column;
-    gap: 16px;
-    max-width: 860px;
-    display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 860px;
+  display: flex;
 }
 
 .head {
@@ -27,19 +31,14 @@
   font-size: 16px;
   line-height: 150%;
   text-align: center;
-  color: #00000099;
-
   color: rgba(0, 0, 0, 0.6);
-
-
-  /* Inside auto layout */
   flex: none;
   order: 1;
   align-self: stretch;
   flex-grow: 0;
-
 }
 
+/* Сітка банерів */
 .banners {
   display: grid;
   row-gap: 32px;
@@ -49,10 +48,12 @@
   inline-size: 100%;
 }
 
+/* Слайдер (прихований на десктопі) */
 .slider {
   display: none;
 }
 
+/* Адаптивність */
 @media (max-width: 1132px) {
   .banners {
     grid-template-columns: repeat(1, 1fr);

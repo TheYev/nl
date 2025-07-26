@@ -1,3 +1,6 @@
+/* Card Component Styles */
+
+/* Основний контейнер картки */
 .card {
   display: flex;
   flex-direction: column;
@@ -5,11 +8,12 @@
   border-radius: 32px;
   gap: 8px;
   padding: 24px;
-  background: #FFFFFF1A;
-  box-shadow: 34.85px 29.63px 48.34px 0px #3366FF0D;
-  backdrop-filter: blur(40px)
+  background: #ffffff1a;
+  box-shadow: 34.85px 29.63px 48.34px 0px #3366ff0d;
+  backdrop-filter: blur(40px);
 }
 
+/* Заголовок картки */
 .head {
   display: flex;
   justify-content: space-between;
@@ -23,6 +27,7 @@
   line-height: 32px;
 }
 
+/* Опис картки */
 .description {
   font-family: var(--font-mulish);
   color: #fff;
@@ -32,6 +37,7 @@
   text-align: left;
 }
 
+/* Адаптивність */
 @media (max-width: 1132px) {
   .card {
     width: 100%;
@@ -46,7 +52,7 @@
 
   .description {
     font-size: 16px;
-    line-height: 130%
+    line-height: 130%;
   }
 }
 

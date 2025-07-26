@@ -1,21 +1,28 @@
+import { memo } from "react";
 import styles from "../styles/card.module.css";
 
-type CardProps = {
+// Типи
+interface CardProps {
   headPercent: string;
   headText: string;
   description: string;
-};
+}
 
-export const Card = (props: CardProps) => {
-  return (
-    <article className={styles.card}>
-      <div className={styles.head}>
-        <h3 className={styles.headText}>{props.headText}</h3>
-        <p className={styles.headText} aria-label={`${props.headText} value`}>
-          {props.headPercent}
-        </p>
-      </div>
-      <p className={styles.description}>{props.description}</p>
-    </article>
-  );
-};
+// Основний компонент
+export const Card = memo(
+  ({ headPercent, headText, description }: CardProps) => {
+    return (
+      <article className={styles.card} role="listitem">
+        <header className={styles.head}>
+          <h3 className={styles.headText}>{headText}</h3>
+          <p className={styles.headText} aria-label={`${headText} value`}>
+            {headPercent}
+          </p>
+        </header>
+        <p className={styles.description}>{description}</p>
+      </article>
+    );
+  }
+);
+
+Card.displayName = "Card";

@@ -1,12 +1,20 @@
+/* Info Extension Component Styles */
+
+/* Основний контейнер */
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(71, 0, 236, 0.1) 0%, rgba(236, 246, 254, 0.2) 100%);
-  backdrop-filter: blur(12px)
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(71, 0, 236, 0.1) 0%,
+    rgba(236, 246, 254, 0.2) 100%
+  );
+  backdrop-filter: blur(12px);
 }
 
+/* Фоновий елемент */
 .background {
   position: absolute;
   top: 10px;
@@ -16,14 +24,17 @@
   height: 100%;
   max-height: 533px;
   overflow: visible;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(71, 0, 236, 0.1) 0%, rgba(236, 246, 254, 0.2) 100%);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(71, 0, 236, 0.1) 0%,
+    rgba(236, 246, 254, 0.2) 100%
+  );
   backdrop-filter: blur(12px);
-
   z-index: 0;
   pointer-events: none;
-  backdrop-filter: blur(10px);
 }
 
+/* Заголовок та підзаголовок */
 .head_block {
   display: flex;
   flex-direction: column;
@@ -53,6 +64,7 @@
   line-height: 150%;
 }
 
+/* Десктопна версія */
 .info_block {
   display: flex;
   flex-direction: row;
@@ -88,6 +100,7 @@
   height: auto;
 }
 
+/* Кнопка встановлення */
 .extension {
   display: flex;
   flex-direction: column;
@@ -101,25 +114,24 @@
 .extention_bttn {
   padding: 10px 40px;
   border-radius: 57px;
-  background: linear-gradient(90deg, #512DA8 0%, #270086 100%);
-
+  background: linear-gradient(90deg, #512da8 0%, #270086 100%);
   font-family: var(--font-outfit);
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;
   letter-spacing: 0.46px;
   cursor: pointer;
-  color: #FFFFFF;
+  color: #ffffff;
   border: none;
   transition: all 0.3s ease;
 }
 
 .extention_bttn:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .bttn_description {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 12px;
   line-height: 266%;
   letter-spacing: 1px;
@@ -129,6 +141,11 @@
   font-weight: 400;
 }
 
+.browsers {
+  font-weight: 700;
+}
+
+/* Мобільна версія (прихована на десктопі) */
 .info_block_mobile {
   display: none;
 }
@@ -141,10 +158,7 @@
   display: none;
 }
 
-.browsers {
-  font-weight: 700;
-}
-
+/* Адаптивність */
 @media (max-width: 1132px) {
   .info_block {
     display: none;
@@ -159,8 +173,13 @@
     position: relative;
     flex-direction: column-reverse;
     max-width: 100%;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(71, 0, 236, 0.1) 0%, rgba(236, 246, 254, 0.2) 100%);
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(71, 0, 236, 0.1) 0%,
+      rgba(236, 246, 254, 0.2) 100%
+    );
     z-index: 1;
+    gap: 12px;
   }
 
   .info_mobile {
@@ -200,28 +219,6 @@
     line-height: 150%;
   }
 
-  .info_block_mobile {
-    display: flex;
-    position: relative;
-    flex-direction: column-reverse;
-    max-width: 100%;
-    gap: 12px;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(71, 0, 236, 0.1) 0%, rgba(236, 246, 254, 0.2) 100%);
-  }
-
-  .info_mobile {
-    display: flex;
-    max-width: 100%;
-  }
-
-  .img_mobile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: none;
-  }
-
   .toolImg_mobile {
     width: 100%;
     height: auto;
@@ -230,7 +227,11 @@
   }
 
   .mobile_bg {
-    background: radial-gradient(50% 50% at 50% 50%, rgba(71, 0, 236, 0.1) 0%, rgba(236, 246, 254, 0.2) 100%);
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(71, 0, 236, 0.1) 0%,
+      rgba(236, 246, 254, 0.2) 100%
+    );
   }
 
   .extension {
@@ -241,7 +242,6 @@
     margin-inline-start: -16px;
     padding-inline-end: 32px;
     padding-inline-start: 16px;
-
     padding-block: 8px;
     overflow: visible;
   }
