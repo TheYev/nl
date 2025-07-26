@@ -1,8 +1,22 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import styles from "./styles/footer.module.css";
 import { Urls } from "@/utils/Urls";
+import { PreregistrationModal } from "../modal/PreregistrationModal";
 
 export const Footer = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   const logos: { [key: string]: string } = {
     "/footer/discord.svg": Urls.DISCORD,
     "/footer/instagram.svg": Urls.INSTAGRAM,
@@ -51,9 +65,9 @@ export const Footer = () => {
             <p className={styles.access_text}>
               Beta access is limited — grab your spot today
             </p>
-            <a href={Urls.GET_EARLY_ACCESS}>
-              <button className={styles.access_bttn}>Get Early Access</button>
-            </a>
+            <button className={styles.access_bttn} onClick={handleOpenModal}>
+              Get Early Access
+            </button>
           </div>
           <p className={styles.description}>
             No credit card required. Cancel anytime. Start growing your income
@@ -103,6 +117,8 @@ export const Footer = () => {
           </div>
         </div>
       </div>
+
+      <PreregistrationModal isOpen={isModalOpen} onClose={handleCloseModal} />
     </footer>
   );
 };

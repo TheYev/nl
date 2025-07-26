@@ -45,5 +45,15 @@
 
   .slider {
     padding: 0;
+    margin-left: -16px;
+  }
+
+  .slyderBody {
+    justify-content: flex-start;
+  }
+
+  .slide {
+    max-width: 70% !important;
+    width: 70% !important;
   }
 }

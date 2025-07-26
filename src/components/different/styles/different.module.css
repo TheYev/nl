@@ -92,7 +92,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 100%;
+    width: calc(100% + 32px);
     margin-inline-end: -32px;
   }
 

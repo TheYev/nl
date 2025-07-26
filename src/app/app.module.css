@@ -5,26 +5,30 @@
   padding-inline: 96px;
   display: flex;
   flex-direction: column;
-  gap: 64px;
-  padding-block-end: 64px;
+  gap: calc(96px * 2);
+  padding-block-end: 96px;
 }
 
 @media (max-width: 1920px) {
   .layout {
-      max-width: 1280px;
+    gap: calc(56px * 2);
+    max-width: 1280px;
+    padding-block-end: 56px;
   }
 }
 
 @media (max-width: 1132px) {
   .layout {
-    gap: 48px;
+    gap: calc(40px * 2);
     padding-inline: 40px;
-    padding-block-end: 48px;
+    padding-block-end: 40px;
   }
 }
 
 @media (max-width: 742px) {
   .layout {
     padding-inline: 16px;
+    gap: calc(24px * 2);
+    padding-block-end: 24px;
   }
 }

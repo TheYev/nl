@@ -8,3 +8,10 @@
   box-sizing: content-box;
   justify-content: start;
 }
+
+@media (max-width: 742px) {
+  .swiper-wrapper {
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
+}

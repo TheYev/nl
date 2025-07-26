@@ -1,8 +1,21 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import styles from "./styles/intro.module.css";
-import { Urls } from "@/utils/Urls";
+import { PreregistrationModal } from "../modal/PreregistrationModal";
 
 export const Intro = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <section
       className={styles.intro}
@@ -27,22 +40,24 @@ export const Intro = () => {
           through seamless Chrome extension integration.
         </p>
         <div className={styles.bttn_info}>
-          <a href={Urls.GET_EARLY_ACCESS}>
-            <button className={styles.bttn}>Get Early Access</button>
-          </a>
+          <button className={styles.bttn} onClick={handleOpenModal}>
+            Get Early Access
+          </button>
           <p className={styles.bttn_description}>
             Beta access is limited — reserve your spot now.
           </p>
         </div>
       </div>
       <div className={styles.bttn_info_mobile}>
-        <a href={Urls.GET_EARLY_ACCESS}>
-          <button className={styles.bttn}>Get Early Access</button>
-        </a>
+        <button className={styles.bttn} onClick={handleOpenModal}>
+          Get Early Access
+        </button>
         <p className={styles.bttn_description}>
           Beta access is limited — reserve your spot now.
         </p>
       </div>
+
+      <PreregistrationModal isOpen={isModalOpen} onClose={handleCloseModal} />
     </section>
   );
 };

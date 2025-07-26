@@ -52,7 +52,7 @@ export const CreatorSlider = () => {
       <h1 className={styles.head}>Loved by top 1% creators</h1>
       <div className={styles.slyderBody}>
         <Swiper
-          centeredSlides={true}
+          centeredSlides={false}
           slidesPerView="auto"
           spaceBetween={1}
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
