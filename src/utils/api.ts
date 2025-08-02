@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://dev.api.neurolover.com';
+const API_BASE_URL = "https://dev.api.neurolover.com";
 
 export interface BillingOption {
   code: string;
@@ -41,25 +41,29 @@ export interface PrognosisResponse {
   data: PrognosisData;
 }
 
-export type BillingPeriod = 'MONTHLY' | 'THREE_MONTHLY' | 'SIX_MONTHLY' | 'YEARLY';
+export type BillingPeriod =
+  | "MONTHLY"
+  | "THREE_MONTHLY"
+  | "SIX_MONTHLY"
+  | "YEARLY";
 
 export const billingPeriodMap: Record<number, BillingPeriod> = {
   1: "MONTHLY",
-  3: "THREE_MONTHLY", 
+  3: "THREE_MONTHLY",
   6: "SIX_MONTHLY",
-  12: "YEARLY"
+  12: "YEARLY",
 };
 
 export const fetchCostData = async (): Promise<CostData> => {
   const response = await fetch(`${API_BASE_URL}/admin/pub/subscription/cost`, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json;charset=UTF-8',
+      "Content-Type": "application/json;charset=UTF-8",
     },
   });
 
   if (!response.ok) {
-    throw new Error('Failed to fetch cost data');
+    throw new Error("Failed to fetch cost data");
   }
 
   const data: CostResponse = await response.json();
@@ -70,19 +74,22 @@ export const calculatePrognosis = async (
   billingPeriod: BillingPeriod,
   accountsCount: number
 ): Promise<PrognosisData> => {
-  const response = await fetch(`${API_BASE_URL}/admin/pub/subscription/prognosis`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json;charset=UTF-8',
-    },
-    body: JSON.stringify({
-      billingPeriod,
-      accountsCount
-    }),
-  });
+  const response = await fetch(
+    `${API_BASE_URL}/admin/pub/subscription/prognosis`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=UTF-8",
+      },
+      body: JSON.stringify({
+        billingPeriod,
+        accountsCount,
+      }),
+    }
+  );
 
   if (!response.ok) {
-    throw new Error('Failed to calculate prognosis');
+    throw new Error("Failed to calculate prognosis");
   }
 
   const data: PrognosisResponse = await response.json();
@@ -90,26 +97,28 @@ export const calculatePrognosis = async (
 };
 
 export const formatPrice = (price: number): string => {
-  return new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
     minimumFractionDigits: 0,
     maximumFractionDigits: 2,
   }).format(price);
 };
 
-export const submitPreregistration = async (email: string): Promise<{ status: string }> => {
+export const submitPreregistration = async (
+  email: string
+): Promise<{ status: string }> => {
   const response = await fetch(`${API_BASE_URL}/admin/pub/preregistration`, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json;charset=UTF-8',
+      "Content-Type": "application/json;charset=UTF-8",
     },
     body: JSON.stringify({ email }),
   });
 
   if (!response.ok) {
-    throw new Error('Failed to submit preregistration');
+    throw new Error("Failed to submit preregistration");
   }
 
   return response.json();
-}; 
+};

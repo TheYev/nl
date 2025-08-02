@@ -2,6 +2,7 @@
   "name": "neurolover-landing",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://TheYev.github.io/nl",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",

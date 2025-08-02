@@ -62,7 +62,8 @@ export const PreregistrationModal = ({
         setSuccess(false);
         setEmail("");
       }, 2000);
-    } catch (error) {
+    } catch (_error) {
+      console.log(_error);
       setError("Failed to submit. Please try again.");
     } finally {
       setIsLoading(false);
@@ -126,8 +127,7 @@ export const PreregistrationModal = ({
               </svg>
               <h2>Success!</h2>
               <p>
-                You've been added to our early access list. We'll notify you
-                when it's ready!
+                {`You've been added to our early access list. We'll notify you when it's ready!`}
               </p>
             </div>
           ) : (
@@ -174,8 +174,7 @@ export const PreregistrationModal = ({
               </form>
 
               <p className={styles.disclaimer}>
-                We'll only use your email to notify you about early access
-                availability.
+                {`We'll only use your email to notify you about early access availability.`}
               </p>
             </>
           )}
