@@ -49,6 +49,7 @@
   overflow: hidden;
   border: 0;
   transition: all 0.3s ease;
+  min-width: fit-content;
 }
 
 .access_bttn:hover {
