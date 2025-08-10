@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 import {
   fetchCostData,
   calculatePrognosis,
-  formatPrice,
   type CostData,
   type PrognosisData,
   type BillingPeriod,
@@ -17,8 +16,8 @@ export const Payment = () => {
   const [selectedBilling, setSelectedBilling] = useState<string>("");
   const [priceData, setPriceData] = useState<PrognosisData | null>(null);
   const [costData, setCostData] = useState<CostData | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [, setIsLoading] = useState(false);
+  const [, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const loadCostData = async () => {
